@@ -8,10 +8,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Provider for service locator and state management
+  # provider for service locator and state management
   provider: ^4.0.4
-  # Value equality
+  # value equality
   equatable: ^1.1.1
+  # functional programming
+  dartz: ^0.8.9
 
 dev_dependencies:
   flutter_test:
