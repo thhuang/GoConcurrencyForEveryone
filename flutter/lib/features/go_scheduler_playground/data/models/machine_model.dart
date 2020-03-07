@@ -6,15 +6,18 @@ class MachineModel extends Machine {
 
   static final _cache = <int, MachineModel>{};
 
-  final int id;
-
-  factory MachineModel() {
+  factory MachineModel(int goroutine0) {
     final id = MachineModel.machineCount++;
-    return _cache.putIfAbsent(id, () => MachineModel._internal(id));
+    return _cache.putIfAbsent(id, () => MachineModel._internal(id, goroutine0));
   }
 
-  MachineModel._internal(this.id);
-
-  @override
-  List<Object> get props => [id];
+  MachineModel._internal(int id, int goroutine0)
+      : assert(id != null),
+        assert(goroutine0 != null),
+        super(
+          id: id,
+          goroutine0: goroutine0,
+          currentGoroutine: goroutine0,
+          previousGoroutine: null,
+        );
 }

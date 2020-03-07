@@ -6,15 +6,17 @@ class ProcessorModel extends Processor {
 
   static final _cache = <int, ProcessorModel>{};
 
-  final int id;
-
   factory ProcessorModel() {
     final id = ProcessorModel.processorCount++;
     return _cache.putIfAbsent(id, () => ProcessorModel._internal(id));
   }
 
-  ProcessorModel._internal(this.id);
-
-  @override
-  List<Object> get props => [id];
+  ProcessorModel._internal(int id)
+      : assert(id != null),
+        super(
+          id: id,
+          runQueue: <int>[],
+          currentMachine: null,
+          freeGoroutines: <int>[],
+        );
 }

@@ -5,15 +5,16 @@ class GoroutineModel extends Goroutine {
 
   static final _cache = <int, GoroutineModel>{};
 
-  final int id;
-
   factory GoroutineModel() {
     final id = GoroutineModel.goroutineCount++;
     return _cache.putIfAbsent(id, () => GoroutineModel._internal(id));
   }
 
-  GoroutineModel._internal(this.id);
-
-  @override
-  List<Object> get props => [id];
+  GoroutineModel._internal(
+    int id,
+  )   : assert(id != null),
+        super(
+          id: id,
+          preempt: false,
+        );
 }
