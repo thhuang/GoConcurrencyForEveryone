@@ -20,27 +20,28 @@ void main() {
     'should forward the call to function [forkGoroutine] in repository [GoSchedulerPlaygroundRepository]',
     () async {
       // arrange
-      final mockGoroutineID = 1;
+      final mockGoroutineID1 = 1;
+      final mockGoroutineID2 = 2;
       final mockDuration = 3;
       when(
         mockGoSchedulerPlaygroundRepository.forkGoroutine(
-          mockGoroutineID,
+          mockGoroutineID1,
           mockDuration,
         ),
       ).thenReturn(
-        Right(null),
+        Right(mockGoroutineID2),
       );
 
       // act
       final result = usecase(Params(
-        id: mockGoroutineID,
+        id: mockGoroutineID1,
         duration: mockDuration,
       ));
 
       // assert
-      expect(result, Right(null));
+      expect(result, Right(mockGoroutineID2));
       verify(mockGoSchedulerPlaygroundRepository.forkGoroutine(
-        mockGoroutineID,
+        mockGoroutineID1,
         mockDuration,
       ));
       verifyNoMoreInteractions(mockGoSchedulerPlaygroundRepository);
