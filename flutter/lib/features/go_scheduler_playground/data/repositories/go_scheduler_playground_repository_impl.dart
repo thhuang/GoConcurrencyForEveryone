@@ -1,18 +1,15 @@
-import 'package:GCFE/core/error/failures.dart';
-import 'package:GCFE/core/settings.dart';
-import 'package:GCFE/features/go_scheduler_playground/data/datasources/processor_data_source.dart';
-import 'package:GCFE/features/go_scheduler_playground/data/models/processor_model.dart';
-
-import 'package:GCFE/features/go_scheduler_playground/domain/entities/goroutine.dart';
-
-import 'package:GCFE/features/go_scheduler_playground/domain/entities/machine.dart';
-
-import 'package:GCFE/features/go_scheduler_playground/domain/entities/processor.dart';
+import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:meta/meta.dart';
 
+import '../../../../core/error/failures.dart';
+import '../../../../core/settings.dart';
+import '../../domain/entities/goroutine.dart';
+import '../../domain/entities/machine.dart';
+import '../../domain/entities/processor.dart';
 import '../../domain/repositories/go_scheduler_playground_repositoriy.dart';
+import '../datasources/processor_data_source.dart';
 
 class GoSchedulerPlaygroundRepositoryImpl
     implements GoSchedulerPlaygroundRepository {
@@ -26,11 +23,12 @@ class GoSchedulerPlaygroundRepositoryImpl
   Either<Failure, void> init() {
     try {
       for (var i = 0; i < DEFAULT_MAX_PROCESSOR_COUNT; i++) {
-        processorDataSource.createProcessor();
+        final processor = processorDataSource.createProcessor();
+        log('create processor ${processor.id.toString()}');
       }
       return Right(null);
     } catch (e) {
-      print(e);
+      log(e);
       return Left(UnexpectedFailure());
     }
   }
@@ -61,8 +59,12 @@ class GoSchedulerPlaygroundRepositoryImpl
 
   @override
   Either<Failure, List<Processor>> getAllProcessors() {
-    // TODO: implement getAllProcessors
-    throw UnimplementedError();
+    try {
+      return Right(processorDataSource.getAllProcessor());
+    } catch (e) {
+      log(e);
+      return Left(UnexpectedFailure());
+    }
   }
 
   @override

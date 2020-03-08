@@ -26,8 +26,8 @@ void main() {
         // arrange
         when(
           mockProcessorDataSource.createProcessor(),
-        ).thenReturn(
-          ProcessorModel(),
+        ).thenAnswer(
+          (_) => ProcessorModel(),
         );
 
         // act
@@ -40,6 +40,31 @@ void main() {
           equals(DEFAULT_MAX_PROCESSOR_COUNT),
         );
         expect(result, equals(Right(null)));
+      },
+    );
+  });
+
+  group('getAllProcessors', () {
+    test(
+      'should return all processors',
+      () async {
+        // arrange
+        for (var i = 0; i < DEFAULT_MAX_PROCESSOR_COUNT; i++) {
+          ProcessorModel();
+        }
+        final mockProcessors = ProcessorModel.getAllProcessor();
+        when(
+          mockProcessorDataSource.getAllProcessor(),
+        ).thenReturn(
+          mockProcessors,
+        );
+
+        // act
+        final result = repository.getAllProcessors();
+
+        // assert
+        verify(mockProcessorDataSource.getAllProcessor()).called(equals(1));
+        expect(result, equals(Right(mockProcessors)));
       },
     );
   });
