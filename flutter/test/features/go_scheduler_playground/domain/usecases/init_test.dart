@@ -27,7 +27,7 @@ void main() {
       final result = usecase(NoParams());
 
       // assert
-      expect(result, Right(null));
+      expect(result, equals(Right(null)));
       verify(mockGoSchedulerPlaygroundRepository.init());
       verifyNoMoreInteractions(mockGoSchedulerPlaygroundRepository);
     },

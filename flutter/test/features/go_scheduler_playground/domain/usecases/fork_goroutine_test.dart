@@ -39,7 +39,7 @@ void main() {
       ));
 
       // assert
-      expect(result, Right(mockGoroutineID2));
+      expect(result, equals(Right(mockGoroutineID2)));
       verify(mockGoSchedulerPlaygroundRepository.forkGoroutine(
         mockGoroutineID1,
         mockDuration,

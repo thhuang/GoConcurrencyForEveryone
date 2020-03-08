@@ -31,7 +31,7 @@ void main() {
       final result = usecase(Params(duration: mockDuration));
 
       // assert
-      expect(result, Right(null));
+      expect(result, equals(Right(null)));
       verify(mockGoSchedulerPlaygroundRepository.progress(mockDuration));
       verifyNoMoreInteractions(mockGoSchedulerPlaygroundRepository);
     },
