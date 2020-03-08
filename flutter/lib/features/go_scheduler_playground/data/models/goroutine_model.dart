@@ -1,12 +1,12 @@
 import 'package:GCFE/features/go_scheduler_playground/domain/entities/goroutine.dart';
 
 class GoroutineModel extends Goroutine {
-  static int goroutineCount = 0;
+  static int _goroutineCount = 0;
 
   static final _cache = <int, GoroutineModel>{};
 
   factory GoroutineModel() {
-    final id = GoroutineModel.goroutineCount++;
+    final id = GoroutineModel._goroutineCount++;
     return _cache.putIfAbsent(id, () => GoroutineModel._internal(id));
   }
 

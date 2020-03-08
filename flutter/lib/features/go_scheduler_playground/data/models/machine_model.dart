@@ -2,12 +2,12 @@ import '../../domain/entities/machine.dart';
 
 class MachineModel extends Machine {
   static int maxMachineCount = 10;
-  static int machineCount = 0;
+  static int _machineCount = 0;
 
   static final _cache = <int, MachineModel>{};
 
   factory MachineModel(int goroutine0) {
-    final id = MachineModel.machineCount++;
+    final id = MachineModel._machineCount++;
     return _cache.putIfAbsent(id, () => MachineModel._internal(id, goroutine0));
   }
 
