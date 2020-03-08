@@ -20,4 +20,13 @@ class ProcessorModel extends Processor {
           currentMachine: null,
           freeGoroutines: <int>[],
         );
+
+  static clear() {
+    _processorCount = 0;
+    _cache.clear();
+  }
+
+  static List<ProcessorModel> getAllProcessor() {
+    return _cache.values.toList();
+  }
 }
