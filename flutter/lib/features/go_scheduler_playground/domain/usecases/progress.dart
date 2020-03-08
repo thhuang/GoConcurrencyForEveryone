@@ -20,7 +20,7 @@ class Progress extends UseCase<void, Params> {
 class Params extends Equatable {
   final int duration;
 
-  Params({this.duration});
+  Params({this.duration}) : assert(duration != null);
 
   @override
   List<Object> get props => [duration];
