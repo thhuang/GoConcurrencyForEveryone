@@ -7,14 +7,16 @@ import 'package:GCFE/features/go_scheduler_playground/domain/entities/processor.
 import 'package:dartz/dartz.dart';
 
 abstract class GoSchedulerPlaygroundRepository {
-  Either<Failure, List<Goroutine>> getGlobalRunQueue();
-  Either<Failure, List<Machine>> getIdleMachines();
-  Either<Failure, List<Processor>> getAllProcessors();
-  Either<Failure, List<Machine>> getParkedMachines();
-  Failure blockGoroutine(int id);
-  Failure unblockGoroutine(int id);
-  Failure endGoroutine(int id);
-  Failure setGoroutineDuration(int id, int duration);
+  Failure init();
+  Failure reset();
   Failure progress(int duration);
   Either<Failure, int> forkGoroutine(int id, int duration);
+  Failure terminateGoroutine(int id);
+  Failure setGoroutineDuration(int id, int duration);
+  Failure blockGoroutine(int id);
+  Failure unblockGoroutine(int id);
+  Either<Failure, List<Processor>> getAllProcessors();
+  Either<Failure, List<Goroutine>> getGlobalRunQueue();
+  Either<Failure, List<Machine>> getIdleMachines();
+  Either<Failure, List<Machine>> getParkedMachines();
 }
