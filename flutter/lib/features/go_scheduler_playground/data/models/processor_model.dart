@@ -1,7 +1,8 @@
+import 'package:GCFE/core/settings.dart';
 import 'package:GCFE/features/go_scheduler_playground/domain/entities/processor.dart';
 
 class ProcessorModel extends Processor {
-  static int maxProcessorCount = 4;
+  static int maxProcessorCount = DEFAULT_MAX_PROCESSOR_COUNT;
   static int processorCount = 0;
 
   static final _cache = <int, ProcessorModel>{};
