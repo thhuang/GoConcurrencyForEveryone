@@ -9,17 +9,6 @@ class SlidesScreen extends StatelessWidget {
   static const String ID = '/slides';
   SlidesScreen({Key key}) : super(key: key);
 
-  bool _handleKeyEvent(FocusNode node, RawKeyEvent event) {
-    if (event.runtimeType != RawKeyUpEvent) {
-      return false;
-    }
-
-    if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-      print("right");
-    } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {}
-    return false;
-  }
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
