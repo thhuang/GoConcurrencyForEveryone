@@ -1,3 +1,4 @@
+import 'package:GCFE/features/slides/presentation/screens/slides_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'features/go_scheduler_playground/presentation/screens/go_scheduler_playground_screen.dart';
@@ -11,9 +12,10 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Go Concurrency for Everyone',
       theme: theme,
-      initialRoute: GoSchedulerPlaygroundScreen.ID,
+      initialRoute: SlidesScreen.ID,
       routes: {
         LandingScreen.ID: (context) => LandingScreen(),
+        SlidesScreen.ID: (context) => SlidesScreen(),
         GoSchedulerPlaygroundScreen.ID: (context) =>
             GoSchedulerPlaygroundScreen(),
       },
