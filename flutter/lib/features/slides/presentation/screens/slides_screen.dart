@@ -36,7 +36,6 @@ class SlidesScreen extends StatelessWidget {
 
 final slides = [
   Slide(
-    backgroundColor: Colors.white10,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -58,7 +57,6 @@ final slides = [
     ),
   ),
   Slide(
-    backgroundColor: Colors.white10,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[

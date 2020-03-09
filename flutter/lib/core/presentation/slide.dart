@@ -34,16 +34,13 @@ class _SlideState extends State<Slide> {
         focusNode: _focusNode,
         autofocus: true,
         onKey: (FocusNode node, RawKeyEvent event) {
-          if (event.runtimeType != RawKeyUpEvent) {
-            return false;
+          if (event.runtimeType == RawKeyUpEvent) {
+            if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+              slide.nextSlide();
+            } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+              slide.previousSlide();
+            }
           }
-
-          if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-            slide.nextSlide();
-          } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-            slide.previousSlide();
-          }
-
           return false;
         },
         child: SizedBox(
