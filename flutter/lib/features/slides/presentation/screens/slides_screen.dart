@@ -23,12 +23,7 @@ class SlidesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => SlidesChangeNotifier(
-        slides: [
-          slide01,
-          slide02,
-        ],
-      ),
+      create: (_) => SlidesChangeNotifier(slides: slides),
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Consumer<SlidesChangeNotifier>(

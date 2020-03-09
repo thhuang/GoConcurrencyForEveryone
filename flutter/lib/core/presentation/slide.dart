@@ -39,10 +39,8 @@ class _SlideState extends State<Slide> {
           }
 
           if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-            print('right');
             slide.nextSlide();
           } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-            print('left');
             slide.previousSlide();
           }
 
