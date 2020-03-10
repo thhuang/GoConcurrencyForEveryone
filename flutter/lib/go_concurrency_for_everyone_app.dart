@@ -39,7 +39,11 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          theme: theme,
+          theme: theme.copyWith(
+            textTheme: TextTheme(
+              headline1: TextStyle(fontSize: 100.0, color: Colors.white),
+            ),
+          ),
           initialRoute: Slides01.ID,
           routes: routes,
         ),

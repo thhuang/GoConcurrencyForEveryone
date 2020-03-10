@@ -10,14 +10,12 @@ class Slides02 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Slide(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Center(
-            child: Text(
-              'Go Concurrency for Everyone',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 100),
-            ),
+          SizedBox(height: 50.0),
+          Text(
+            'Go Concurrency for Everyone',
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ],
       ),

@@ -16,14 +16,16 @@ class Slides01 extends StatelessWidget {
             child: Text(
               'Go Concurrency for Everyone',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 100),
+              style: Theme.of(context).textTheme.headline1,
             ),
           ),
           SizedBox(height: 100.0),
           Center(
             child: Text(
               'TH Huang',
-              style: TextStyle(fontSize: 45),
+              style: Theme.of(context).textTheme.headline1.copyWith(
+                    fontSize: 40.0,
+                  ),
             ),
           ),
         ],
