@@ -1,29 +1,29 @@
-import 'package:flutter/foundation.dart';
-
-import '../../../../core/presentation/slide.dart';
+import 'package:flutter/widgets.dart';
 
 class SlidesChangeNotifier with ChangeNotifier {
   int _slideIndex;
-  List<Slide> _slides;
+  List<String> _slideIDs;
 
   SlidesChangeNotifier({
     int initialSlideIndex,
-    List<Slide> slides,
-  })  : assert(slides != null),
-        _slides = slides,
+    List<String> slideIDs,
+  })  : assert(slideIDs != null),
+        _slideIDs = slideIDs,
         _slideIndex = initialSlideIndex ?? 0;
 
-  void nextSlide() {
-    if (_slideIndex < _slides.length - 1) {
+  void nextSlide(Function() callback) {
+    if (_slideIndex < _slideIDs.length - 1) {
       _slideIndex++;
       notifyListeners();
+      callback();
     }
   }
 
-  void previousSlide() {
+  void previousSlide(Function() callback) {
     if (_slideIndex > 0) {
       _slideIndex--;
       notifyListeners();
+      callback();
     }
   }
 
@@ -38,7 +38,7 @@ class SlidesChangeNotifier with ChangeNotifier {
   }
 
   void toLastSlide() {
-    _slideIndex = _slides.length - 1;
+    _slideIndex = _slideIDs.length - 1;
     notifyListeners();
   }
 
@@ -46,7 +46,7 @@ class SlidesChangeNotifier with ChangeNotifier {
     return _slideIndex;
   }
 
-  Slide get currentSlide {
-    return _slides[_slideIndex];
+  String get currentSlideID {
+    return _slideIDs[_slideIndex];
   }
 }
