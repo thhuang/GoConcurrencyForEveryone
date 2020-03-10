@@ -1,5 +1,6 @@
-import 'package:GCFE/core/presentation/slide.dart';
 import 'package:flutter/foundation.dart';
+
+import '../../../../core/presentation/slide.dart';
 
 class SlidesChangeNotifier with ChangeNotifier {
   int _slideIndex;
