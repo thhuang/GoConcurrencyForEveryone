@@ -6,7 +6,8 @@ import 'package:provider/provider.dart';
 
 import '../../features/slides/presentation/logicholders/slides.dart';
 import '../settings.dart';
-import 'scaleFactors.dart';
+import 'route_animations.dart';
+import 'scale_factors.dart';
 
 class Slide extends StatefulWidget {
   final Widget child;
@@ -52,13 +53,17 @@ class _SlideState extends State<Slide> {
             if (event.runtimeType == RawKeyUpEvent) {
               if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
                 slide.nextSlide(
-                  () => Navigator.pushReplacementNamed(
-                      context, slide.currentSlideID),
+                  () => Navigator.pushReplacement(
+                    context,
+                    FadeRoute(page: slide.currentSlide),
+                  ),
                 );
               } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
                 slide.previousSlide(
-                  () => Navigator.pushReplacementNamed(
-                      context, slide.currentSlideID),
+                  () => Navigator.pushReplacement(
+                    context,
+                    FadeRoute(page: slide.currentSlide),
+                  ),
                 );
               }
             }

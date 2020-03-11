@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/presentation/scaleFactors.dart';
 import '../../../../core/presentation/slide.dart';
 
 class Slides02 extends StatelessWidget {

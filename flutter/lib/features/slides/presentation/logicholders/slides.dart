@@ -2,17 +2,17 @@ import 'package:flutter/widgets.dart';
 
 class SlidesChangeNotifier with ChangeNotifier {
   int _slideIndex;
-  List<String> _slideIDs;
+  List<Widget> _slides;
 
   SlidesChangeNotifier({
     int initialSlideIndex,
-    List<String> slideIDs,
-  })  : assert(slideIDs != null),
-        _slideIDs = slideIDs,
+    List<Widget> slides,
+  })  : assert(slides != null),
+        _slides = slides,
         _slideIndex = initialSlideIndex ?? 0;
 
   void nextSlide(Function() callback) {
-    if (_slideIndex < _slideIDs.length - 1) {
+    if (_slideIndex < _slides.length - 1) {
       _slideIndex++;
       notifyListeners();
       callback();
@@ -38,7 +38,7 @@ class SlidesChangeNotifier with ChangeNotifier {
   }
 
   void toLastSlide() {
-    _slideIndex = _slideIDs.length - 1;
+    _slideIndex = _slides.length - 1;
     notifyListeners();
   }
 
@@ -46,7 +46,7 @@ class SlidesChangeNotifier with ChangeNotifier {
     return _slideIndex;
   }
 
-  String get currentSlideID {
-    return _slideIDs[_slideIndex];
+  Widget get currentSlide {
+    return _slides[_slideIndex];
   }
 }
