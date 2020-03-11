@@ -13,15 +13,18 @@ class Slides01 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: Text(
-              'Go Concurrency for Everyone',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline1,
+            child: Hero(
+              tag: 'title',
+              child: SlideText(
+                'Go Concurrency for Everyone',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.headline1,
+              ),
             ),
           ),
-          SizedBox(height: 100.0),
+          SlideSizedBox(height: 100.0),
           Center(
-            child: Text(
+            child: SlideText(
               'TH Huang',
               style: Theme.of(context).textTheme.headline1.copyWith(
                     fontSize: 40.0,

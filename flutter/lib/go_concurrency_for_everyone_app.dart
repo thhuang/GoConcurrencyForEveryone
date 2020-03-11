@@ -41,7 +41,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
           title: 'Go Concurrency for Everyone',
           theme: theme.copyWith(
             textTheme: TextTheme(
-              headline1: TextStyle(fontSize: 100.0, color: Colors.white),
+              headline1: TextStyle(fontSize: 80.0, color: Colors.white),
             ),
           ),
           initialRoute: Slides01.ID,

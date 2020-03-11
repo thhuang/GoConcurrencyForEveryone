@@ -1,8 +1,12 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../features/slides/presentation/logicholders/slides.dart';
+import '../settings.dart';
+import 'scaleFactors.dart';
 
 class Slide extends StatefulWidget {
   final Widget child;
@@ -29,6 +33,15 @@ class _SlideState extends State<Slide> {
 
   @override
   Widget build(BuildContext context) {
+    final width = min(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height * SLIDE_WIDTH_HEIGHT_RATIO,
+    );
+    final height = min(
+      MediaQuery.of(context).size.height,
+      MediaQuery.of(context).size.width / SLIDE_WIDTH_HEIGHT_RATIO,
+    );
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Consumer<SlidesChangeNotifier>(
@@ -51,17 +64,12 @@ class _SlideState extends State<Slide> {
             }
             return false;
           },
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            child: FittedBox(
-              fit: BoxFit.contain,
-              child: Container(
-                  height: 900,
-                  width: 1600,
-                  child: widget.child,
-                  color: widget.backgroundColor),
-            ),
+          child: Center(
+            child: Container(
+                height: height,
+                width: width,
+                child: widget.child,
+                color: widget.backgroundColor),
           ),
         ),
       ),
@@ -78,4 +86,55 @@ class SlideRoute {
     @required this.builder,
   })  : assert(id != null),
         assert(builder != null);
+}
+
+class SlideText extends StatelessWidget {
+  final String data;
+  final TextStyle style;
+  final TextAlign textAlign;
+
+  const SlideText(
+    this.data, {
+    Key key,
+    this.style,
+    this.textAlign,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final textScaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+
+    return Text(
+      data,
+      textAlign: textAlign,
+      style: style,
+      textScaleFactor: textScaleFactor,
+    );
+  }
+}
+
+class SlideSizedBox extends StatelessWidget {
+  final double width;
+  final double height;
+
+  const SlideSizedBox({
+    Key key,
+    this.width = 0.0,
+    this.height = 0.0,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return SizedBox(
+      height: height * scaleFactor,
+      width: width * scaleFactor,
+    );
+  }
 }
