@@ -51,14 +51,18 @@ class _SlideState extends State<Slide> {
           autofocus: true,
           onKey: (FocusNode node, RawKeyEvent event) {
             if (event.runtimeType == RawKeyUpEvent) {
-              if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+              final isRight = event.logicalKey == LogicalKeyboardKey.arrowRight;
+              final isLeft = event.logicalKey == LogicalKeyboardKey.arrowLeft;
+              final isUp = event.logicalKey == LogicalKeyboardKey.arrowUp;
+              final isDown = event.logicalKey == LogicalKeyboardKey.arrowDown;
+              if (isRight || isDown) {
                 slide.nextSlide(
                   () => Navigator.pushReplacement(
                     context,
                     FadeRoute(page: slide.currentSlide),
                   ),
                 );
-              } else if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+              } else if (isLeft || isUp) {
                 slide.previousSlide(
                   () => Navigator.pushReplacement(
                     context,
@@ -124,11 +128,13 @@ class SlideText extends StatelessWidget {
 class SlideSizedBox extends StatelessWidget {
   final double width;
   final double height;
+  final Widget child;
 
   const SlideSizedBox({
     Key key,
-    this.width = 0.0,
-    this.height = 0.0,
+    this.width,
+    this.height,
+    this.child,
   }) : super(key: key);
 
   @override
@@ -138,8 +144,35 @@ class SlideSizedBox extends StatelessWidget {
       MediaQuery.of(context).size.height,
     );
     return SizedBox(
-      height: height * scaleFactor,
-      width: width * scaleFactor,
+      key: key,
+      height: height == null ? null : height * scaleFactor,
+      width: width == null ? null : width * scaleFactor,
+      child: child,
+    );
+  }
+}
+
+class SlideHero extends StatelessWidget {
+  final Object tag;
+  final Widget child;
+
+  const SlideHero({
+    Key key,
+    @required this.tag,
+    @required this.child,
+  })  : assert(tag != null),
+        assert(child != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideSizedBox(
+      child: Hero(
+        tag: tag,
+        child: FittedBox(
+          child: child,
+        ),
+      ),
     );
   }
 }

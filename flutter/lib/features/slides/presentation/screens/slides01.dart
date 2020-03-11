@@ -9,11 +9,12 @@ class Slides01 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slide(
+      backgroundColor: Colors.white10,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: Hero(
+            child: SlideHero(
               tag: 'title',
               child: SlideText(
                 'Go Concurrency for Everyone',
@@ -27,7 +28,7 @@ class Slides01 extends StatelessWidget {
             child: SlideText(
               'TH Huang',
               style: Theme.of(context).textTheme.headline1.copyWith(
-                    fontSize: 40.0,
+                    fontSize: 35.0,
                   ),
             ),
           ),

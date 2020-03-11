@@ -9,17 +9,21 @@ class Slides02 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slide(
+      backgroundColor: Colors.white10,
       child: Column(
         children: <Widget>[
           SlideSizedBox(
-            height: 50.0,
+            height: 40.0,
           ),
-          Hero(
+          SlideHero(
             tag: 'title',
             child: SlideText(
               'Go Concurrency for Everyone',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context)
+                  .textTheme
+                  .headline1
+                  .copyWith(fontSize: 60.0),
             ),
           ),
         ],
