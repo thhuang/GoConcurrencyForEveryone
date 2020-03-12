@@ -152,6 +152,133 @@ class SlideSizedBox extends StatelessWidget {
   }
 }
 
+class SlideContainer extends StatelessWidget {
+  final Decoration decoration;
+  final double width;
+  final double height;
+  final Widget child;
+
+  const SlideContainer({
+    Key key,
+    this.decoration,
+    this.width,
+    this.height,
+    this.child,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return Container(
+      key: key,
+      decoration: decoration,
+      height: height == null ? null : height * scaleFactor,
+      width: width == null ? null : width * scaleFactor,
+      child: child,
+    );
+  }
+}
+
+class SlidePadding extends StatelessWidget {
+  final Widget child;
+  final double right;
+  final double left;
+  final double top;
+  final double bottom;
+
+  const SlidePadding.only({
+    Key key,
+    @required this.child,
+    this.right = 0.0,
+    this.left = 0.0,
+    this.top = 0.0,
+    this.bottom = 0.0,
+  })  : assert(child != null),
+        super(key: key);
+
+  const SlidePadding.symmetric({
+    Key key,
+    double vertical = 0.0,
+    double horizontal = 0.0,
+    @required this.child,
+  })  : assert(child != null),
+        left = horizontal,
+        top = vertical,
+        right = horizontal,
+        bottom = vertical,
+        super(key: key);
+
+  const SlidePadding.all(
+    double value, {
+    Key key,
+    @required this.child,
+  })  : assert(child != null),
+        left = value,
+        top = value,
+        right = value,
+        bottom = value,
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+
+    return Padding(
+      padding: EdgeInsets.only(
+        right: right * scaleFactor,
+        left: left * scaleFactor,
+        top: top * scaleFactor,
+        bottom: bottom * scaleFactor,
+      ),
+      child: child,
+    );
+  }
+}
+
+class SlideTextBox extends StatelessWidget {
+  final Color borderColor;
+  final double borderWidth;
+  final double height;
+  final double width;
+  final List<Widget> children;
+
+  const SlideTextBox({
+    Key key,
+    @required this.borderColor,
+    @required this.borderWidth,
+    this.height,
+    this.width,
+    @required this.children,
+  })  : assert(borderColor != null),
+        assert(borderWidth != null),
+        assert(children != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideContainer(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: borderColor,
+          width: borderWidth,
+        ),
+      ),
+      height: height,
+      width: width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: children,
+      ),
+    );
+  }
+}
+
 class SlideHero extends StatelessWidget {
   final Object tag;
   final Widget child;

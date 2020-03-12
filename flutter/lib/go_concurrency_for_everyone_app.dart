@@ -27,7 +27,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
           ),
           // initialRoute: Slides01.ID,
           // routes: routes,
-          home: Slides01(),
+          home: Slides02(),
         ),
       ),
     );
