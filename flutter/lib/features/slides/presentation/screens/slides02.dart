@@ -17,7 +17,7 @@ class Slides02 extends StatelessWidget {
             height: 40.0,
           ),
           SlideHero(
-            tag: 'title',
+            tag: 'Go Concurrency for Everyone',
             child: SlideText(
               'Go Concurrency for Everyone',
               textAlign: TextAlign.center,
@@ -34,7 +34,7 @@ class Slides02 extends StatelessWidget {
                   SlideText(
                     'Concurrency\nvs\nParallelism',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 50.0, height: 1.15),
+                    style: headline1StyleWith(fontSize: 45.0, height: 1.15),
                   ),
                 ],
               ),
@@ -45,7 +45,7 @@ class Slides02 extends StatelessWidget {
                   SlideText(
                     'Concurrency Models:\nSharing vs Passing',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 50.0, height: 1.3),
+                    style: headline1StyleWith(fontSize: 45.0, height: 1.3),
                   ),
                 ],
               ),
@@ -61,7 +61,7 @@ class Slides02 extends StatelessWidget {
                   SlideText(
                     'Why Goroutine',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 50.0),
+                    style: headline1StyleWith(fontSize: 45.0),
                   ),
                 ],
               ),
@@ -70,9 +70,9 @@ class Slides02 extends StatelessWidget {
                 borderColor: Colors.blue,
                 children: <Widget>[
                   SlideText(
-                    'Go Scheduler',
+                    'Goroutine Scheduler',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 50.0),
+                    style: headline1StyleWith(fontSize: 45.0),
                   ),
                 ],
               ),
@@ -101,9 +101,10 @@ class AgendaBox extends StatelessWidget {
       horizontalPadding: 12.0,
       verticalPadding: 12.0,
       borderColor: borderColor,
-      borderWidth: 3.0,
+      borderWidth: 5.0,
+      borderRadius: BorderRadius.circular(20.0),
       height: 230.0,
-      width: 500.0,
+      width: 480.0,
       children: children,
     );
   }

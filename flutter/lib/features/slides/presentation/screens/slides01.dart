@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
+import '../../../../core/settings.dart';
 
 class Slides01 extends StatelessWidget {
   static const String ID = '/slide01';
@@ -10,27 +11,32 @@ class Slides01 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Slide(
       backgroundColor: Colors.white10,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
+        alignment: Alignment.bottomLeft,
         children: <Widget>[
-          Center(
-            child: SlideHero(
-              tag: 'title',
-              child: SlideText(
-                'Go Concurrency for Everyone',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline1,
-              ),
-            ),
-          ),
-          SlideSizedBox(height: 100.0),
-          Center(
-            child: SlideText(
-              'TH Huang',
-              style: Theme.of(context).textTheme.headline1.copyWith(
-                    fontSize: 35.0,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: SlideHero(
+                  tag: 'Go Concurrency for Everyone',
+                  child: SlideText(
+                    'Go Concurrency for Everyone',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1,
                   ),
-            ),
+                ),
+              ),
+              SlideSizedBox(height: 100.0),
+              Center(
+                child: SlideText(
+                  'TH Huang',
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontSize: 35.0,
+                      ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

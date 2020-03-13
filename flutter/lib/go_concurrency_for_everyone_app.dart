@@ -27,7 +27,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               headline1: TextStyle(
                 fontSize: 80.0,
                 color: Colors.white,
-                fontFamily: 'Baloo2',
+                fontFamily: 'FiraSans',
               ),
             ),
           ),

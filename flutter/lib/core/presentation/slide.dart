@@ -97,6 +97,31 @@ class SlideRoute {
         assert(builder != null);
 }
 
+class SlideHero extends StatelessWidget {
+  final Object tag;
+  final Widget child;
+
+  const SlideHero({
+    Key key,
+    @required this.tag,
+    @required this.child,
+  })  : assert(tag != null),
+        assert(child != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideSizedBox(
+      child: Hero(
+        tag: tag,
+        child: FittedBox(
+          child: child,
+        ),
+      ),
+    );
+  }
+}
+
 class SlideText extends StatelessWidget {
   final String data;
   final TextStyle style;
@@ -251,11 +276,13 @@ class SlideTextBox extends StatelessWidget {
   final CrossAxisAlignment crossAxisAlignment;
   final double verticalPadding;
   final double horizontalPadding;
+  final BorderRadiusGeometry borderRadius;
 
   const SlideTextBox({
     Key key,
     @required this.borderColor,
     @required this.borderWidth,
+    this.borderRadius,
     this.height,
     this.width,
     @required this.children,
@@ -276,6 +303,7 @@ class SlideTextBox extends StatelessWidget {
           color: borderColor,
           width: borderWidth,
         ),
+        borderRadius: borderRadius,
       ),
       height: height,
       width: width,
@@ -292,27 +320,43 @@ class SlideTextBox extends StatelessWidget {
   }
 }
 
-class SlideHero extends StatelessWidget {
-  final Object tag;
+class SlidePositioned extends StatelessWidget {
+  final double left;
+  final double top;
+  final double right;
+  final double bottom;
+  final double width;
+  final double height;
   final Widget child;
 
-  const SlideHero({
+  const SlidePositioned({
     Key key,
-    @required this.tag,
+    this.left,
+    this.top,
+    this.right,
+    this.bottom,
+    this.width,
+    this.height,
     @required this.child,
-  })  : assert(tag != null),
-        assert(child != null),
+  })  : assert(left == null || right == null || width == null),
+        assert(top == null || bottom == null || height == null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SlideSizedBox(
-      child: Hero(
-        tag: tag,
-        child: FittedBox(
-          child: child,
-        ),
-      ),
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+
+    return Positioned(
+      left: left == null ? null : left * scaleFactor,
+      top: top == null ? null : top * scaleFactor,
+      right: right == null ? null : right * scaleFactor,
+      bottom: bottom == null ? null : bottom * scaleFactor,
+      width: width == null ? null : width * scaleFactor,
+      height: height == null ? null : height * scaleFactor,
+      child: child,
     );
   }
 }

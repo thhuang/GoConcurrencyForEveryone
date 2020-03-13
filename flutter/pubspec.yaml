@@ -23,7 +23,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
   fonts:
-    - family: Baloo2
+    - family: FiraSans
       fonts:
-        - asset: assets/fonts/Baloo2/Baloo2-Regular.ttf
+        - asset: assets/fonts/FiraSans/FiraSans-Regular.ttf
+    - family: LibreBaskerville
+      fonts:
+        - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Regular.ttf
+        - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Italic.ttf
+          style: italic
