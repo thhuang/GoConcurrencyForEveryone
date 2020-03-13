@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'features/slides/presentation/logicholders/slides.dart';
-import 'features/slides/presentation/screens/slides01.dart';
-import 'features/slides/presentation/screens/slides02.dart';
-import 'features/slides/presentation/screens/slides03.dart';
+import 'features/slides/presentation/screens/slide01.dart';
+import 'features/slides/presentation/screens/slide02.dart';
+import 'features/slides/presentation/screens/slide03.dart';
+import 'features/slides/presentation/screens/slide04.dart';
+import 'features/slides/presentation/screens/slide05.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
   final slides = [
-    Slides01(),
-    Slides02(),
-    Slides03(),
+    Slide01(),
+    Slide02(),
+    Slide03(),
+    Slide04(),
+    Slide05(),
   ];
 
   @override
@@ -31,9 +35,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          // initialRoute: Slides01.ID,
-          // routes: routes,
-          home: Slides01(),
+          home: Slide05(),
         ),
       ),
     );

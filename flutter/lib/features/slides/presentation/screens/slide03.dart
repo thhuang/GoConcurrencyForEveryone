@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
 
-class Slides03 extends StatelessWidget {
+class Slide03 extends StatelessWidget {
   static const String ID = '/slide03';
-  Slides03({Key key}) : super(key: key);
+  Slide03({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +12,30 @@ class Slides03 extends StatelessWidget {
     return Slide(
       backgroundColor: Colors.white10,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SlideSizedBox(
-            height: 40.0,
+          SlideHero(
+            tag: 'Concurrency',
+            child: SlideText(
+              'Concurrency',
+              textAlign: TextAlign.center,
+              style: headline1StyleWith(fontSize: 100.0, height: 1.2),
+            ),
           ),
           SlideHero(
-            tag: 'title',
+            tag: 'vs',
             child: SlideText(
-              'Go Concurrency for Everyone',
+              'vs',
               textAlign: TextAlign.center,
-              style: headline1StyleWith(fontSize: 60.0),
+              style: headline1StyleWith(fontSize: 100.0, height: 1.2),
+            ),
+          ),
+          SlideHero(
+            tag: 'Parallelism',
+            child: SlideText(
+              'Parallelism',
+              textAlign: TextAlign.center,
+              style: headline1StyleWith(fontSize: 100.0, height: 1.2),
             ),
           ),
         ],

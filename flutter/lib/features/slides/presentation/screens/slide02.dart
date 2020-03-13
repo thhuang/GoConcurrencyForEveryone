@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
 
-class Slides02 extends StatelessWidget {
+class Slide02 extends StatelessWidget {
   static const String ID = '/slide02';
-  Slides02({Key key}) : super(key: key);
+  Slide02({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Slides02 extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SlideSizedBox(
-            height: 40.0,
+            height: 30.0,
           ),
           SlideHero(
             tag: 'Go Concurrency for Everyone',
@@ -31,10 +31,29 @@ class Slides02 extends StatelessWidget {
               AgendaBox(
                 borderColor: Colors.green,
                 children: <Widget>[
-                  SlideText(
-                    'Concurrency\nvs\nParallelism',
-                    textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 45.0, height: 1.15),
+                  SlideHero(
+                    tag: 'Concurrency',
+                    child: SlideText(
+                      'Concurrency',
+                      textAlign: TextAlign.center,
+                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                    ),
+                  ),
+                  SlideHero(
+                    tag: 'vs',
+                    child: SlideText(
+                      'vs',
+                      textAlign: TextAlign.center,
+                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                    ),
+                  ),
+                  SlideHero(
+                    tag: 'Parallelism',
+                    child: SlideText(
+                      'Parallelism',
+                      textAlign: TextAlign.center,
+                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                    ),
                   ),
                 ],
               ),
@@ -45,7 +64,7 @@ class Slides02 extends StatelessWidget {
                   SlideText(
                     'Concurrency Models:\nSharing vs Passing',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 45.0, height: 1.3),
+                    style: headline1StyleWith(fontSize: 45.0, height: 1.5),
                   ),
                 ],
               ),
