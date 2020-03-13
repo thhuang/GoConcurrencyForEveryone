@@ -247,6 +247,10 @@ class SlideTextBox extends StatelessWidget {
   final double height;
   final double width;
   final List<Widget> children;
+  final MainAxisAlignment mainAxisAlignment;
+  final CrossAxisAlignment crossAxisAlignment;
+  final double verticalPadding;
+  final double horizontalPadding;
 
   const SlideTextBox({
     Key key,
@@ -255,6 +259,10 @@ class SlideTextBox extends StatelessWidget {
     this.height,
     this.width,
     @required this.children,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.verticalPadding = 0.0,
+    this.horizontalPadding = 0.0,
   })  : assert(borderColor != null),
         assert(borderWidth != null),
         assert(children != null),
@@ -271,9 +279,14 @@ class SlideTextBox extends StatelessWidget {
       ),
       height: height,
       width: width,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: children,
+      child: SlidePadding.symmetric(
+        vertical: verticalPadding,
+        horizontal: horizontalPadding,
+        child: Column(
+          mainAxisAlignment: mainAxisAlignment,
+          crossAxisAlignment: crossAxisAlignment,
+          children: children,
+        ),
       ),
     );
   }

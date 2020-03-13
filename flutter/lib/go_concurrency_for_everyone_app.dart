@@ -4,11 +4,13 @@ import 'package:provider/provider.dart';
 import 'features/slides/presentation/logicholders/slides.dart';
 import 'features/slides/presentation/screens/slides01.dart';
 import 'features/slides/presentation/screens/slides02.dart';
+import 'features/slides/presentation/screens/slides03.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
   final slides = [
     Slides01(),
     Slides02(),
+    Slides03(),
   ];
 
   @override
@@ -22,12 +24,16 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
           title: 'Go Concurrency for Everyone',
           theme: theme.copyWith(
             textTheme: TextTheme(
-              headline1: TextStyle(fontSize: 80.0, color: Colors.white),
+              headline1: TextStyle(
+                fontSize: 80.0,
+                color: Colors.white,
+                fontFamily: 'Baloo2',
+              ),
             ),
           ),
           // initialRoute: Slides01.ID,
           // routes: routes,
-          home: Slides02(),
+          home: Slides01(),
         ),
       ),
     );

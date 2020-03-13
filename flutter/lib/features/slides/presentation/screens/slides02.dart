@@ -21,7 +21,7 @@ class Slides02 extends StatelessWidget {
             child: SlideText(
               'Go Concurrency for Everyone',
               textAlign: TextAlign.center,
-              style: headline1StyleWith(fontSize: 60.0),
+              style: headline1StyleWith(fontSize: 65.0),
             ),
           ),
           SlideSizedBox(height: 30.0),
@@ -29,64 +29,53 @@ class Slides02 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               AgendaBox(
+                borderColor: Colors.green,
                 children: <Widget>[
-                  SlidePadding.only(
-                    top: 12.0,
-                    left: 12.0,
-                    right: 12.0,
-                    child: SlideText(
-                      'WHAT',
-                      style: headline1StyleWith(fontSize: 47.0),
-                    ),
-                  ),
-                  SlidePadding.only(
-                    top: 5.0,
-                    left: 12.0,
-                    right: 12.0,
-                    child: Row(
-                      children: <Widget>[
-                        SlideText(
-                          '→ ',
-                          style: headline1StyleWith(fontSize: 35.0),
-                        ),
-                        SlideText(
-                          'is Concurrency',
-                          style: headline1StyleWith(fontSize: 35.0),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SlidePadding.only(
-                    top: 5.0,
-                    left: 12.0,
-                    right: 12.0,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SlideText(
-                          '→ ',
-                          style: headline1StyleWith(fontSize: 35.0),
-                        ),
-                        SlideText(
-                          'is the design of Go\nConcurrency',
-                          style: headline1StyleWith(fontSize: 35.0),
-                        ),
-                      ],
-                    ),
+                  SlideText(
+                    'Concurrency\nvs\nParallelism',
+                    textAlign: TextAlign.center,
+                    style: headline1StyleWith(fontSize: 50.0, height: 1.15),
                   ),
                 ],
               ),
               SlideSizedBox(width: 30.0),
-              AgendaBox(children: <Widget>[]),
+              AgendaBox(
+                borderColor: Colors.red,
+                children: <Widget>[
+                  SlideText(
+                    'Concurrency Models:\nSharing vs Passing',
+                    textAlign: TextAlign.center,
+                    style: headline1StyleWith(fontSize: 50.0, height: 1.3),
+                  ),
+                ],
+              ),
             ],
           ),
           SlideSizedBox(height: 30.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              AgendaBox(children: <Widget>[]),
+              AgendaBox(
+                borderColor: Colors.yellow,
+                children: <Widget>[
+                  SlideText(
+                    'Why Goroutine',
+                    textAlign: TextAlign.center,
+                    style: headline1StyleWith(fontSize: 50.0),
+                  ),
+                ],
+              ),
               SlideSizedBox(width: 30.0),
-              AgendaBox(children: <Widget>[]),
+              AgendaBox(
+                borderColor: Colors.blue,
+                children: <Widget>[
+                  SlideText(
+                    'Go Scheduler',
+                    textAlign: TextAlign.center,
+                    style: headline1StyleWith(fontSize: 50.0),
+                  ),
+                ],
+              ),
             ],
           ),
         ],
@@ -96,9 +85,11 @@ class Slides02 extends StatelessWidget {
 }
 
 class AgendaBox extends StatelessWidget {
+  final Color borderColor;
   final List<Widget> children;
   const AgendaBox({
     Key key,
+    this.borderColor = Colors.green,
     @required this.children,
   })  : assert(children != null),
         super(key: key);
@@ -106,7 +97,10 @@ class AgendaBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SlideTextBox(
-      borderColor: Colors.green,
+      mainAxisAlignment: MainAxisAlignment.center,
+      horizontalPadding: 12.0,
+      verticalPadding: 12.0,
+      borderColor: borderColor,
       borderWidth: 3.0,
       height: 230.0,
       width: 500.0,
