@@ -1,3 +1,4 @@
+import 'package:GCFE/features/slides/presentation/screens/slide_cradits.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +18,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide04(),
     Slide05(),
     Slide06(),
+    SlideCradits(),
   ];
 
   @override
@@ -25,7 +27,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 4, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 5, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -40,7 +42,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide05(),
+          home: Slide06(),
         ),
       ),
     );
