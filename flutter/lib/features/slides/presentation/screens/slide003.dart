@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
 
-class Slide03 extends StatelessWidget {
-  Slide03({Key key}) : super(key: key);
+class Slide003 extends StatelessWidget {
+  Slide003({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

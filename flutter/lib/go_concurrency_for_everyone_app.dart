@@ -2,46 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'features/slides/presentation/logicholders/slides.dart';
-import 'features/slides/presentation/screens/slide01.dart';
-import 'features/slides/presentation/screens/slide02.dart';
-import 'features/slides/presentation/screens/slide03.dart';
-import 'features/slides/presentation/screens/slide04.dart';
-import 'features/slides/presentation/screens/slide05.dart';
-import 'features/slides/presentation/screens/slide06.dart';
-import 'features/slides/presentation/screens/slide07.dart';
-import 'features/slides/presentation/screens/slide08.dart';
-import 'features/slides/presentation/screens/slide09.dart';
-import 'features/slides/presentation/screens/slide10.dart';
-import 'features/slides/presentation/screens/slide11.dart';
-import 'features/slides/presentation/screens/slide12.dart';
-import 'features/slides/presentation/screens/slide13.dart';
-import 'features/slides/presentation/screens/slide14.dart';
-import 'features/slides/presentation/screens/slide15.dart';
-import 'features/slides/presentation/screens/slide16.dart';
-import 'features/slides/presentation/screens/slide17.dart';
-import 'features/slides/presentation/screens/slide18.dart';
+import 'features/slides/presentation/screens/slide001.dart';
+import 'features/slides/presentation/screens/slide002.dart';
+import 'features/slides/presentation/screens/slide003.dart';
+import 'features/slides/presentation/screens/slide004.dart';
+import 'features/slides/presentation/screens/slide006.dart';
+import 'features/slides/presentation/screens/slide007.dart';
+import 'features/slides/presentation/screens/slide008.dart';
+import 'features/slides/presentation/screens/slide015.dart';
+import 'features/slides/presentation/screens/slide019.dart';
 import 'features/slides/presentation/screens/slide_cradits.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
   final slides = [
-    Slide01(),
-    Slide02(),
-    Slide03(),
-    Slide04(),
-    Slide05(),
-    Slide06(),
-    Slide07(),
-    Slide08(),
-    Slide09(),
-    Slide10(),
-    Slide11(),
-    Slide12(),
-    Slide13(),
-    Slide14(),
-    Slide15(),
-    Slide16(),
-    Slide17(),
-    Slide18(),
+    Slide001(),
+    Slide002(),
+    Slide003(),
+    Slide004(),
+    Slide005(),
+    Slide006(),
+    Slide007(),
+    Slide008(),
+    Slide009(),
+    Slide010(),
+    Slide011(),
+    Slide012(),
+    Slide013(),
+    Slide014(),
+    Slide015(),
+    Slide016(),
+    Slide017(),
+    Slide018(),
+    Slide019(),
+    Slide020(),
+    Slide021(),
     SlideCradits(),
   ];
 
@@ -51,7 +45,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 17, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 20, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -66,7 +60,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide18(),
+          home: Slide021(),
         ),
       ),
     );

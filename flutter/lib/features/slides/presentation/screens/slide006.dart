@@ -6,8 +6,8 @@ import '../../../../core/presentation/slide.dart';
 import '../../../../core/presentation/widget_animations.dart';
 import '../../../../core/settings.dart';
 
-class Slide06 extends StatelessWidget {
-  Slide06({Key key}) : super(key: key);
+class Slide006 extends StatelessWidget {
+  Slide006({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class Slide06 extends StatelessWidget {
             child: Transform.rotate(
               angle: -pi / 10,
               child: Hero(
-                tag: 'bread 1',
+                tag: 'toastwithjam1',
                 child: SlideImage(
                   BREAD_WITH_JAM,
                   width: 260.0,
@@ -60,7 +60,7 @@ class Slide06 extends StatelessWidget {
             child: Transform.rotate(
               angle: -pi / 10,
               child: Hero(
-                tag: 'bread 2',
+                tag: 'toastwithjam2',
                 child: SlideImage(
                   BREAD_WITH_JAM,
                   width: 260.0,
