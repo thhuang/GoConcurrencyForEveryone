@@ -14,4 +14,7 @@ const JAM = 'assets/images/png/jam.png';
 const MICROWAVE = 'assets/images/png/microwave.png';
 const TOASTER = 'assets/images/png/toaster.png';
 const MILK = 'assets/images/png/milk.png';
+const BREAD = 'assets/images/png/bread.png';
 const SUMSHINE = 'assets/images/png/sunshine.png';
+const ARROW_RIGHT = 'assets/images/png/arrow_right.png';
+const ARROW_LEFT = 'assets/images/png/arrow_left.png';

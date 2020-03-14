@@ -1,4 +1,3 @@
-import 'package:GCFE/features/slides/presentation/screens/slide_cradits.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +9,18 @@ import 'features/slides/presentation/screens/slide04.dart';
 import 'features/slides/presentation/screens/slide05.dart';
 import 'features/slides/presentation/screens/slide06.dart';
 import 'features/slides/presentation/screens/slide07.dart';
+import 'features/slides/presentation/screens/slide08.dart';
+import 'features/slides/presentation/screens/slide09.dart';
+import 'features/slides/presentation/screens/slide10.dart';
+import 'features/slides/presentation/screens/slide11.dart';
+import 'features/slides/presentation/screens/slide12.dart';
+import 'features/slides/presentation/screens/slide13.dart';
+import 'features/slides/presentation/screens/slide14.dart';
+import 'features/slides/presentation/screens/slide15.dart';
+import 'features/slides/presentation/screens/slide16.dart';
+import 'features/slides/presentation/screens/slide17.dart';
+import 'features/slides/presentation/screens/slide18.dart';
+import 'features/slides/presentation/screens/slide_cradits.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
   final slides = [
@@ -20,6 +31,17 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide05(),
     Slide06(),
     Slide07(),
+    Slide08(),
+    Slide09(),
+    Slide10(),
+    Slide11(),
+    Slide12(),
+    Slide13(),
+    Slide14(),
+    Slide15(),
+    Slide16(),
+    Slide17(),
+    Slide18(),
     SlideCradits(),
   ];
 
@@ -29,7 +51,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 0, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 17, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -44,7 +66,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide01(),
+          home: Slide18(),
         ),
       ),
     );

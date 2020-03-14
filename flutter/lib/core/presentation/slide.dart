@@ -151,7 +151,6 @@ class SlideText extends StatelessWidget {
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
-
     return Text(
       data,
       textAlign: textAlign,
@@ -264,7 +263,6 @@ class SlidePadding extends StatelessWidget {
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
-
     return Padding(
       padding: EdgeInsets.only(
         right: right * scaleFactor,
@@ -308,11 +306,15 @@ class SlideTextBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
     return SlideContainer(
       decoration: BoxDecoration(
         border: Border.all(
           color: borderColor,
-          width: borderWidth,
+          width: borderWidth * scaleFactor,
         ),
         borderRadius: borderRadius,
       ),
@@ -359,7 +361,6 @@ class SlidePositioned extends StatelessWidget {
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
-
     return Positioned(
       left: left == null ? null : left * scaleFactor,
       top: top == null ? null : top * scaleFactor,
