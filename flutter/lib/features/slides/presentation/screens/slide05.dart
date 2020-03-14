@@ -1,4 +1,3 @@
-import 'package:GCFE/core/presentation/route_animations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
@@ -10,7 +9,6 @@ class Slide05 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      animatedRouteType: AnimatedRouteType.enterExit,
       backgroundColor: Colors.white10,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

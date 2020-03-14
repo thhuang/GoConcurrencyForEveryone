@@ -14,7 +14,7 @@ class Slide04 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SlideSizedBox(height: 30),
-          SlideHero(
+          SlideTextHero(
             tag: 'Concurrency',
             child: SlideText(
               'Concurrency',

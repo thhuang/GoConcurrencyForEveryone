@@ -13,7 +13,7 @@ class Slide03 extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SlideHero(
+          SlideTextHero(
             tag: 'Concurrency',
             child: SlideText(
               'Concurrency',
@@ -21,7 +21,7 @@ class Slide03 extends StatelessWidget {
               style: headline1StyleWith(fontSize: 100.0, height: 1.2),
             ),
           ),
-          SlideHero(
+          SlideTextHero(
             tag: 'vs',
             child: SlideText(
               'vs',
@@ -29,7 +29,7 @@ class Slide03 extends StatelessWidget {
               style: headline1StyleWith(fontSize: 100.0, height: 1.2),
             ),
           ),
-          SlideHero(
+          SlideTextHero(
             tag: 'Parallelism',
             child: SlideText(
               'Parallelism',

@@ -15,7 +15,7 @@ class Slide02 extends StatelessWidget {
           SlideSizedBox(
             height: 30.0,
           ),
-          SlideHero(
+          SlideTextHero(
             tag: 'Go Concurrency for Everyone',
             child: SlideText(
               'Go Concurrency for Everyone',
@@ -30,7 +30,7 @@ class Slide02 extends StatelessWidget {
               AgendaBox(
                 borderColor: Colors.green,
                 children: <Widget>[
-                  SlideHero(
+                  SlideTextHero(
                     tag: 'Concurrency',
                     child: SlideText(
                       'Concurrency',
@@ -38,7 +38,7 @@ class Slide02 extends StatelessWidget {
                       style: headline1StyleWith(fontSize: 45.0, height: 1.2),
                     ),
                   ),
-                  SlideHero(
+                  SlideTextHero(
                     tag: 'vs',
                     child: SlideText(
                       'vs',
@@ -46,7 +46,7 @@ class Slide02 extends StatelessWidget {
                       style: headline1StyleWith(fontSize: 45.0, height: 1.2),
                     ),
                   ),
-                  SlideHero(
+                  SlideTextHero(
                     tag: 'Parallelism',
                     child: SlideText(
                       'Parallelism',

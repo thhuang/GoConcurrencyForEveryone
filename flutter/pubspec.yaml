@@ -14,8 +14,6 @@ dependencies:
   equatable: ^0.6.1
   # functional programming
   dartz: ^0.8.9
-  # svg
-  flutter_svg: ^0.17.3+1
 
 dev_dependencies:
   flutter_test:
@@ -26,7 +24,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    - assets/images/png/
   fonts:
     - family: FiraSans
       fonts:

@@ -1,7 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/presentation/slide.dart';
+import '../../../../core/presentation/widget_animations.dart';
 import '../../../../core/settings.dart';
 
 class Slide06 extends StatelessWidget {
@@ -9,11 +11,64 @@ class Slide06 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.blue[50],
       child: Stack(
-        children: <Widget>[SvgPicture.asset(MILK)],
+        children: <Widget>[
+          SlidePositioned(
+            top: 30.0,
+            left: 80.0,
+            child: Rotater(
+              seconds: 20,
+              child: SlideSizedBox(
+                width: 150.0,
+                child: Image.asset(SUMSHINE),
+              ),
+            ),
+          ),
+          SlidePositioned(
+            top: 160.0,
+            left: 630.0,
+            child: Transform.rotate(
+              angle: pi / 30,
+              child: Hero(
+                tag: 'cocoa',
+                child: SlideImage(
+                  COCOA,
+                  width: 270.0,
+                ),
+              ),
+            ),
+          ),
+          SlidePositioned(
+            top: 285.0,
+            left: 300.0,
+            child: Transform.rotate(
+              angle: -pi / 10,
+              child: Hero(
+                tag: 'bread 1',
+                child: SlideImage(
+                  BREAD_WITH_JAM,
+                  width: 260.0,
+                ),
+              ),
+            ),
+          ),
+          SlidePositioned(
+            top: 290.0,
+            left: 350.0,
+            child: Transform.rotate(
+              angle: -pi / 10,
+              child: Hero(
+                tag: 'bread 2',
+                child: SlideImage(
+                  BREAD_WITH_JAM,
+                  width: 260.0,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

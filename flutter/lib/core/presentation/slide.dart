@@ -108,11 +108,11 @@ class SlideRoute {
         assert(builder != null);
 }
 
-class SlideHero extends StatelessWidget {
+class SlideTextHero extends StatelessWidget {
   final Object tag;
   final Widget child;
 
-  const SlideHero({
+  const SlideTextHero({
     Key key,
     @required this.tag,
     @required this.child,
@@ -368,6 +368,33 @@ class SlidePositioned extends StatelessWidget {
       width: width == null ? null : width * scaleFactor,
       height: height == null ? null : height * scaleFactor,
       child: child,
+    );
+  }
+}
+
+class SlideImage extends StatelessWidget {
+  final double width;
+  final double height;
+  final String imagePath;
+
+  const SlideImage(
+    this.imagePath, {
+    Key key,
+    this.width,
+    this.height,
+  })  : assert(imagePath != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return Image.asset(
+      imagePath,
+      width: width == null ? null : width * scaleFactor,
+      height: height == null ? null : height * scaleFactor,
     );
   }
 }
