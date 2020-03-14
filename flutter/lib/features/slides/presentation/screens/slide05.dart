@@ -1,15 +1,16 @@
+import 'package:GCFE/core/presentation/route_animations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
 
 class Slide05 extends StatelessWidget {
-  static const String ID = '/slide03';
   Slide05({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
+      animatedRouteType: AnimatedRouteType.scale,
       backgroundColor: Colors.white10,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

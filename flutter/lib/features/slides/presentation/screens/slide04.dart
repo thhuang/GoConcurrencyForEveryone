@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../core/presentation/slide.dart';
 
 class Slide04 extends StatelessWidget {
-  static const String ID = '/slide03';
   Slide04({Key key}) : super(key: key);
 
   @override

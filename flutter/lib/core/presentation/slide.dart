@@ -12,11 +12,13 @@ import 'scale_factors.dart';
 class Slide extends StatefulWidget {
   final Widget child;
   final Color backgroundColor;
+  final AnimatedRouteType animatedRouteType;
 
   Slide({
     Key key,
     this.child,
     this.backgroundColor,
+    this.animatedRouteType,
   }) : super(key: key);
 
   @override
@@ -59,14 +61,23 @@ class _SlideState extends State<Slide> {
                 slide.nextSlide(
                   () => Navigator.pushReplacement(
                     context,
-                    FadeRoute(page: slide.currentSlide),
+                    AnimatedRoute.build(
+                      type: widget.animatedRouteType,
+                      currentPage: slide.lastSlide,
+                      nextPage: slide.currentSlide,
+                    ),
                   ),
                 );
               } else if (isLeft || isUp) {
                 slide.previousSlide(
                   () => Navigator.pushReplacement(
                     context,
-                    FadeRoute(page: slide.currentSlide),
+                    AnimatedRoute.build(
+                      // Use fade animation for returning to previous slide
+                      type: AnimatedRouteType.fade,
+                      currentPage: slide.lastSlide,
+                      nextPage: slide.currentSlide,
+                    ),
                   ),
                 );
               }
