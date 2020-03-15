@@ -2,21 +2,21 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class Rotater extends StatefulWidget {
+class Rotator extends StatefulWidget {
   final Widget child;
   final int seconds;
 
-  const Rotater({
+  const Rotator({
     Key key,
     this.child,
     this.seconds = 10,
   }) : super(key: key);
 
   @override
-  _RotaterState createState() => _RotaterState();
+  _RotatorState createState() => _RotatorState();
 }
 
-class _RotaterState extends State<Rotater> with SingleTickerProviderStateMixin {
+class _RotatorState extends State<Rotator> with SingleTickerProviderStateMixin {
   AnimationController animationController;
 
   @override

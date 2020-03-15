@@ -36,6 +36,18 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide019(),
     Slide020(),
     Slide021(),
+    Slide022(),
+    Slide023(),
+    Slide024(),
+    Slide025(),
+    Slide026(),
+    Slide027(),
+    Slide028(),
+    Slide029(),
+    Slide030(),
+    Slide031(),
+    Slide032(),
+    Slide033(),
     SlideCradits(),
   ];
 
@@ -45,7 +57,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 20, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 32, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -58,9 +70,19 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
                 color: Colors.white,
                 fontFamily: 'FiraSans',
               ),
+              headline3: TextStyle(
+                fontSize: 80.0,
+                color: Colors.red,
+                fontFamily: 'FiraSans',
+              ),
+              headline4: TextStyle(
+                fontSize: 40.0,
+                color: Colors.black,
+                fontFamily: 'FiraSans',
+              ),
             ),
           ),
-          home: Slide021(),
+          home: Slide033(),
         ),
       ),
     );

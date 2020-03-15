@@ -349,3 +349,191 @@ class ArrowRight extends StatelessWidget {
     );
   }
 }
+
+class CocoaTime extends StatelessWidget {
+  const CocoaTime({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 215.0,
+      left: 998.0,
+      child: SlideText(
+        '2.5 min',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+    );
+  }
+}
+
+class ToastWithJamTime1 extends StatelessWidget {
+  const ToastWithJamTime1({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 395.0,
+      left: 838.0,
+      child: SlideText(
+        '6.5 min',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+    );
+  }
+}
+
+class ToastWithJamTime2 extends StatelessWidget {
+  const ToastWithJamTime2({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 575.0,
+      left: 838.0,
+      child: SlideText(
+        '6.5 min',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+    );
+  }
+}
+
+class MicrowaveTime extends StatelessWidget {
+  const MicrowaveTime({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 205.0,
+      left: 383.5,
+      child: SlideText(
+        '(1.5 min)',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+    );
+  }
+}
+
+class ToasterTime extends StatelessWidget {
+  const ToasterTime({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 485.0,
+      left: 422.0,
+      child: SlideText(
+        '(5.5 min)',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+    );
+  }
+}
+
+class Timer extends StatelessWidget {
+  const Timer({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: 345.0,
+      left: 1050.0,
+      child: SlideImage(TIMER, width: 80.0),
+    );
+  }
+}
+
+class PositionedChef extends StatelessWidget {
+  final double top;
+  final double left;
+  const PositionedChef({
+    Key key,
+    this.top = 0.0,
+    this.left = 0.0,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: top,
+      left: left,
+      child: Hero(
+        tag: 'chef',
+        child: Transform.rotate(angle: pi / 8, child: SlideImage(CHEF)),
+      ),
+      height: 80.0,
+    );
+  }
+}
+
+class PositionedCheck extends StatelessWidget {
+  final double top;
+  final double left;
+  const PositionedCheck({
+    Key key,
+    this.top = 0.0,
+    this.left = 0.0,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: top,
+      left: left,
+      child: SlideImage(CHECK),
+      height: 35.0,
+    );
+  }
+}
+
+class PositionedPlus extends StatelessWidget {
+  final double top;
+  final double left;
+  const PositionedPlus({
+    Key key,
+    this.top = 0.0,
+    this.left = 0.0,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePositioned(
+      top: top,
+      left: left,
+      child: SlideImage(PLUS),
+      height: 35.0,
+    );
+  }
+}
+
+class BreakfastFlowWithTime extends StatelessWidget {
+  const BreakfastFlowWithTime({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        BreakfastFlow(),
+        CocoaTime(),
+        ToastWithJamTime1(),
+        ToastWithJamTime2(),
+        MicrowaveTime(),
+        ToasterTime(),
+      ],
+    );
+  }
+}

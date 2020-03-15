@@ -16,5 +16,7 @@ const TOAST = 'assets/images/png/bread.png';
 const SUMSHINE = 'assets/images/png/sunshine.png';
 const CHEF = 'assets/images/png/chef.png';
 const CHECK = 'assets/images/png/check.png';
+const PLUS = 'assets/images/png/plus.png';
+const TIMER = 'assets/images/png/timer.png';
 const ARROW_RIGHT = 'assets/images/png/arrow_right.png';
 const ARROW_LEFT = 'assets/images/png/arrow_left.png';

@@ -18,7 +18,7 @@ class Slide006 extends StatelessWidget {
           SlidePositioned(
             top: 30.0,
             left: 80.0,
-            child: Rotater(
+            child: Rotator(
               seconds: 20,
               child: SlideSizedBox(
                 width: 150.0,
