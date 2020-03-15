@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/presentation/scale_factors.dart';
 import '../../../../core/presentation/slide.dart';
 import '../widgets/breakfast.dart';
+import '../widgets/concurrency_vs_parallelism.dart';
 
 class Slide035 extends StatelessWidget {
   Slide035({Key key}) : super(key: key);
@@ -16,8 +17,9 @@ class Slide035 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -28,6 +30,7 @@ class Slide035 extends StatelessWidget {
                 ),
               ),
             ),
+            SlideSizedBox(height: 120.0),
             AsyncBreakfastFlow(),
           ],
         ),
@@ -48,8 +51,9 @@ class Slide036 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -60,7 +64,7 @@ class Slide036 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Stack(
               overflow: Overflow.visible,
               children: <Widget>[
@@ -95,8 +99,9 @@ class Slide037 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -107,7 +112,7 @@ class Slide037 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Stack(
               children: <Widget>[
                 Hero(tag: 'process2', child: Process2()),
@@ -180,8 +185,9 @@ class Slide038 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -192,7 +198,7 @@ class Slide038 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Stack(
               overflow: Overflow.visible,
               children: <Widget>[
@@ -223,8 +229,9 @@ class Slide039 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -235,7 +242,7 @@ class Slide039 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Stack(
               overflow: Overflow.visible,
               children: <Widget>[
@@ -291,8 +298,9 @@ class Slide040 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -303,7 +311,7 @@ class Slide040 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -333,13 +341,6 @@ class Slide040 extends StatelessWidget {
                 ColorBlock(id: '06'),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SlideSizedBox(width: 270.0),
-                SlideSizedBox(width: 270.0),
-              ],
-            ),
           ],
         ),
       ),
@@ -359,8 +360,9 @@ class Slide041 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -371,7 +373,7 @@ class Slide041 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -390,13 +392,6 @@ class Slide041 extends StatelessWidget {
                 ColorBlock(id: '05'),
                 ColorBlock(id: '11', color: Colors.lightGreen),
                 ColorBlock(id: '06'),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SlideSizedBox(width: 270.0),
-                SlideSizedBox(width: 270.0),
               ],
             ),
           ],
@@ -418,8 +413,9 @@ class Slide042 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -430,7 +426,7 @@ class Slide042 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -456,13 +452,6 @@ class Slide042 extends StatelessWidget {
                 ColorBlock(id: '06'),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SlideSizedBox(width: 270.0),
-                SlideSizedBox(width: 270.0),
-              ],
-            ),
           ],
         ),
       ),
@@ -482,8 +471,9 @@ class Slide043 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -494,7 +484,7 @@ class Slide043 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -524,13 +514,6 @@ class Slide043 extends StatelessWidget {
                 ColorBlock(id: '06'),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SlideSizedBox(width: 270.0),
-                SlideSizedBox(width: 270.0),
-              ],
-            ),
           ],
         ),
       ),
@@ -550,8 +533,9 @@ class Slide044 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 120.0),
             SlideSizedBox(
-              height: 350.0,
+              height: 110.0,
               child: Center(
                 child: SlideText(
                   'Concurrency',
@@ -562,7 +546,7 @@ class Slide044 extends StatelessWidget {
                 ),
               ),
             ),
-            SlideSizedBox(height: 10.0),
+            SlideSizedBox(height: 130.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -592,53 +576,7 @@ class Slide044 extends StatelessWidget {
                 ColorBlock(id: '11', color: Colors.lightGreen),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SlideSizedBox(width: 270.0),
-                SlideSizedBox(width: 270.0),
-              ],
-            ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class ColorBlock extends StatelessWidget {
-  final String id;
-  final double height;
-  final double width;
-  final Color color;
-  final double borderWidth;
-
-  const ColorBlock({
-    Key key,
-    @required this.id,
-    this.height = 60.0,
-    this.width = 60.0,
-    this.color = Colors.lightBlue,
-    this.borderWidth = 2.0,
-  })  : assert(id != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final scaleFactor = getScaleFactor(
-      MediaQuery.of(context).size.width,
-      MediaQuery.of(context).size.height,
-    );
-    return Hero(
-      tag: 'colorblock' + id,
-      child: SlideContainer(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-          color: color,
-          border: Border.all(
-            width: borderWidth * scaleFactor,
-          ),
         ),
       ),
     );
