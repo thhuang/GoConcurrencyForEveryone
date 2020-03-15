@@ -8,7 +8,7 @@ class Slide001 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: <Widget>[

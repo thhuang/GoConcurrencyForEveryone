@@ -1,10 +1,7 @@
-import 'dart:math';
-
-import 'package:GCFE/features/slides/presentation/widgets/breakfast.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
-import '../../../../core/settings.dart';
+import '../widgets/breakfast.dart';
 
 class Slide015 extends StatelessWidget {
   Slide015({Key key}) : super(key: key);
