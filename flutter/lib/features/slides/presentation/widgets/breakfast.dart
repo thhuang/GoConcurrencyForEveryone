@@ -6,180 +6,220 @@ import '../../../../core/presentation/slide.dart';
 import '../../../../core/settings.dart';
 
 class Cocoa extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Cocoa({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'cocoa',
-      child: SlideImage(
-        COCOA,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'cocoa',
+            child: SlideImage(COCOA, height: height),
+          )
+        : SlideImage(COCOA, height: height);
   }
 }
 
 class Ice extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Ice({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'ice',
-      child: SlideImage(
-        ICE,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'ice',
+            child: SlideImage(ICE, height: height),
+          )
+        : SlideImage(ICE, height: height);
   }
 }
 
 class Chocolate extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Chocolate({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'chocolate',
-      child: SlideImage(
-        CHOCOLATE,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'chocolate',
+            child: SlideImage(CHOCOLATE, height: height),
+          )
+        : SlideImage(CHOCOLATE, height: height);
   }
 }
 
 class Microwave extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Microwave({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'microwave',
-      child: SlideImage(
-        MICROWAVE,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'microwave',
+            child: SlideImage(MICROWAVE, height: height),
+          )
+        : SlideImage(MICROWAVE, height: height);
   }
 }
 
 class Milk extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Milk({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'milk',
-      child: SlideImage(
-        MILK,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'milk',
+            child: SlideImage(MILK, height: height),
+          )
+        : SlideImage(MILK, height: height);
   }
 }
 
 class Fridge extends StatelessWidget {
+  final double height;
+  final bool hero;
+
   const Fridge({
     Key key,
+    this.hero = true,
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'fridge',
-      child: SlideImage(
-        FRIDGE,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'fridge',
+            child: SlideImage(FRIDGE, height: height),
+          )
+        : SlideImage(FRIDGE, height: height);
   }
 }
 
 class ToastWithJam extends StatelessWidget {
+  final double height;
+  final bool hero;
   final String id;
+
   const ToastWithJam({
     Key key,
+    this.hero = true,
     this.id = '',
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'toastwithjam' + id,
-      child: SlideImage(
-        BREAD_WITH_JAM,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'toastwithjam' + id,
+            child: SlideImage(BREAD_WITH_JAM, height: height),
+          )
+        : SlideImage(BREAD_WITH_JAM, height: height);
   }
 }
 
 class Jam extends StatelessWidget {
+  final double height;
+  final bool hero;
   final String id;
+
   const Jam({
     Key key,
+    this.hero = true,
     this.id = '',
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'jam' + id,
-      child: SlideImage(
-        JAM,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'jam' + id,
+            child: SlideImage(JAM, height: height),
+          )
+        : SlideImage(JAM, height: height);
   }
 }
 
 class Toaster extends StatelessWidget {
+  final double height;
+  final bool hero;
   final String id;
+
   const Toaster({
     Key key,
+    this.hero = true,
     this.id = '',
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'toaster' + id,
-      child: SlideImage(
-        TOASTER,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'toaster' + id,
+            child: SlideImage(TOASTER, height: height),
+          )
+        : SlideImage(TOASTER, height: height);
   }
 }
 
 class Toast extends StatelessWidget {
+  final double height;
+  final bool hero;
   final String id;
+
   const Toast({
     Key key,
+    this.hero = true,
     this.id = '',
+    this.height = 120.0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: 'toast' + id,
-      child: SlideImage(
-        TOAST,
-        height: 120.0,
-      ),
-    );
+    return hero
+        ? Hero(
+            tag: 'toast' + id,
+            child: SlideImage(TOAST, height: height),
+          )
+        : SlideImage(TOAST, height: height);
   }
 }
 
@@ -533,6 +573,170 @@ class BreakfastFlowWithTime extends StatelessWidget {
         ToastWithJamTime2(),
         MicrowaveTime(),
         ToasterTime(),
+      ],
+    );
+  }
+}
+
+class SyncBreakfastFlow extends StatelessWidget {
+  const SyncBreakfastFlow({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Spacer(flex: 10),
+        Fridge(height: 80.0),
+        Milk(height: 80.0),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Microwave(height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Chocolate(height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Ice(height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Toast(id: '1', height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Toaster(id: '1', height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Jam(id: '1', height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Toast(id: '2', height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Toaster(id: '2', height: 80.0),
+        ),
+        SlidePadding.symmetric(
+          horizontal: 5.0,
+          child: Jam(id: '2', height: 80.0),
+        ),
+        Spacer(flex: 10),
+      ],
+    );
+  }
+}
+
+class AsyncBreakfastFlow extends StatelessWidget {
+  const AsyncBreakfastFlow({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Spacer(flex: 10),
+            Column(
+              children: <Widget>[
+                Fridge(hero: false, height: 80.0),
+              ],
+            ),
+            Milk(hero: false, height: 80.0),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Microwave(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Chocolate(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Ice(hero: false, height: 80.0),
+            ),
+            Spacer(flex: 10),
+          ],
+        ),
+        SlideSizedBox(height: 10.0),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Spacer(flex: 10),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Toast(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Toast(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Toaster(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.75,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.6,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.45,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.3,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.2,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Opacity(
+                opacity: 0.1,
+                child: Toaster(hero: false, height: 80.0),
+              ),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Jam(hero: false, height: 80.0),
+            ),
+            SlidePadding.symmetric(
+              horizontal: 5.0,
+              child: Jam(hero: false, height: 80.0),
+            ),
+            Spacer(flex: 10),
+          ],
+        ),
       ],
     );
   }
