@@ -42,26 +42,3 @@ class Slide003 extends StatelessWidget {
     );
   }
 }
-
-class AgendaBox extends StatelessWidget {
-  final List<Widget> children;
-  const AgendaBox({
-    Key key,
-    @required this.children,
-  })  : assert(children != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SlideTextBox(
-      mainAxisAlignment: MainAxisAlignment.center,
-      horizontalPadding: 12.0,
-      verticalPadding: 12.0,
-      borderColor: Colors.green,
-      borderWidth: 3.0,
-      height: 230.0,
-      width: 500.0,
-      children: children,
-    );
-  }
-}
