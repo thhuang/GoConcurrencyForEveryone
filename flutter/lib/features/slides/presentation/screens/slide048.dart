@@ -12,8 +12,9 @@ class Slide048 extends StatelessWidget {
       child: SlidePadding.symmetric(
         horizontal: 50.0,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SlideSizedBox(height: 60),
             SlideTextBox(
               mainAxisAlignment: MainAxisAlignment.start,
               horizontalPadding: 12.0,
@@ -33,7 +34,7 @@ class Slide048 extends StatelessWidget {
                         ),
                   ),
                 ),
-                SlideSizedBox(height: 10.0),
+                SlideSizedBox(height: 30.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -76,7 +77,7 @@ class Slide048 extends StatelessWidget {
                         ),
                   ),
                 ),
-                SlideSizedBox(height: 10.0),
+                SlideSizedBox(height: 30.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[

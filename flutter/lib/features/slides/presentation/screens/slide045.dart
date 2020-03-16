@@ -252,7 +252,10 @@ class Slide047 extends StatelessWidget {
                       ],
                     ),
                     ColorBlock(
-                        id: '14', width: 180.0, color: Colors.yellow[200]),
+                      id: '14',
+                      width: 180.0,
+                      color: Colors.yellow[200],
+                    ),
                   ],
                 ),
                 ColorBlock(id: '06'),
