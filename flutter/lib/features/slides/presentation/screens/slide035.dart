@@ -21,12 +21,15 @@ class Slide035 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -55,12 +58,15 @@ class Slide036 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -103,12 +109,15 @@ class Slide037 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -189,12 +198,15 @@ class Slide038 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -233,12 +245,15 @@ class Slide039 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -302,12 +317,15 @@ class Slide040 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -364,12 +382,15 @@ class Slide041 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -417,12 +438,15 @@ class Slide042 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -475,12 +499,15 @@ class Slide043 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -537,12 +564,15 @@ class Slide044 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Concurrency',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'concurrency',
+                  child: SlideText(
+                    'Concurrency',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),

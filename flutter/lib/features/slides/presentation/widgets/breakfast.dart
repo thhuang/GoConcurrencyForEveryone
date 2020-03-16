@@ -332,7 +332,7 @@ class DoubleToastFlow extends StatelessWidget {
               ),
               SlideSizedBox(height: 40.0),
               Hero(
-                tag: 'arrow331',
+                tag: 'arrow232',
                 child: Transform.rotate(
                     angle: pi / 5, child: SlideImage(ARROW_RIGHT, width: 40.0)),
               ),

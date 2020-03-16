@@ -20,12 +20,15 @@ class Slide045 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Parallelism',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'parallelism',
+                  child: SlideText(
+                    'Parallelism',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -89,12 +92,15 @@ class Slide046 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Parallelism',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'parallelism',
+                  child: SlideText(
+                    'Parallelism',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
@@ -169,12 +175,15 @@ class Slide047 extends StatelessWidget {
             SlideSizedBox(
               height: 110.0,
               child: Center(
-                child: SlideText(
-                  'Parallelism',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 100.0,
-                      ),
+                child: SlideTextHero(
+                  tag: 'parallelism',
+                  child: SlideText(
+                    'Parallelism',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontSize: 100.0,
+                        ),
+                  ),
                 ),
               ),
             ),
