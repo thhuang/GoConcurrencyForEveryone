@@ -25,7 +25,7 @@ class Slide048 extends StatelessWidget {
               borderWidth: 0.0,
               children: [
                 SlideTextHero(
-                  tag: 'concurrency',
+                  tag: 'Concurrency',
                   child: SlideText(
                     'Concurrency',
                     textAlign: TextAlign.center,
@@ -68,7 +68,7 @@ class Slide048 extends StatelessWidget {
               borderWidth: 0.0,
               children: [
                 SlideTextHero(
-                  tag: 'parallelism',
+                  tag: 'Parallelism',
                   child: SlideText(
                     'Parallelism',
                     textAlign: TextAlign.center,

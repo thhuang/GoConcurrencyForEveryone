@@ -15,6 +15,8 @@ import 'features/slides/presentation/screens/slide034.dart';
 import 'features/slides/presentation/screens/slide035.dart';
 import 'features/slides/presentation/screens/slide045.dart';
 import 'features/slides/presentation/screens/slide048.dart';
+import 'features/slides/presentation/screens/slide049.dart';
+import 'features/slides/presentation/screens/slide050.dart';
 import 'features/slides/presentation/screens/slide_cradits.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
@@ -67,6 +69,8 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide046(),
     Slide047(),
     Slide048(),
+    Slide049(),
+    Slide050(),
     SlideCradits(),
   ];
 
@@ -76,7 +80,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 47, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 49, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -101,7 +105,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide048(),
+          home: Slide050(),
         ),
       ),
     );

@@ -21,7 +21,7 @@ class Slide045 extends StatelessWidget {
               height: 110.0,
               child: Center(
                 child: SlideTextHero(
-                  tag: 'parallelism',
+                  tag: 'Parallelism',
                   child: SlideText(
                     'Parallelism',
                     textAlign: TextAlign.center,
@@ -93,7 +93,7 @@ class Slide046 extends StatelessWidget {
               height: 110.0,
               child: Center(
                 child: SlideTextHero(
-                  tag: 'parallelism',
+                  tag: 'Parallelism',
                   child: SlideText(
                     'Parallelism',
                     textAlign: TextAlign.center,
@@ -176,7 +176,7 @@ class Slide047 extends StatelessWidget {
               height: 110.0,
               child: Center(
                 child: SlideTextHero(
-                  tag: 'parallelism',
+                  tag: 'Parallelism',
                   child: SlideText(
                     'Parallelism',
                     textAlign: TextAlign.center,
