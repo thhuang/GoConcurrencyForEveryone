@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'features/slides/presentation/logicholders/slides.dart';
+import 'features/slides/presentation/screens/slide000.dart';
 import 'features/slides/presentation/screens/slide001.dart';
 import 'features/slides/presentation/screens/slide002.dart';
 import 'features/slides/presentation/screens/slide003.dart';
@@ -21,6 +22,7 @@ import 'features/slides/presentation/screens/slide_cradits.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
   final slides = [
+    Slide000(),
     Slide001(),
     Slide002(),
     Slide003(),
@@ -80,7 +82,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 49, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 0, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -105,7 +107,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide050(),
+          home: Slide000(),
         ),
       ),
     );
