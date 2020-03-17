@@ -12,8 +12,8 @@ class Slide000 extends StatelessWidget {
       backgroundColor: Colors.white10,
       child: Center(
         child: SlideSizedBox(
-          width: 860.0,
-          height: 300.0,
+          width: 900.0,
+          height: 350.0,
           child: TypewriterAnimatedTextKit(
             text: [
               "Concurrency is a pattern!",
@@ -21,12 +21,13 @@ class Slide000 extends StatelessWidget {
               "Concurrency is a lifestyle!!!",
             ],
             textStyle: Theme.of(context).textTheme.headline1.copyWith(
-                  fontFamily: 'Rye',
-                  fontSize: 150.0,
+                  fontFamily: 'UnifrakturMaguntia',
+                  fontSize: 200.0,
                 ),
             textAlign: TextAlign.start,
             alignment: AlignmentDirectional.center,
-            speed: Duration(milliseconds: 100),
+            speed: Duration(milliseconds: 200),
+            totalRepeatCount: 1000,
           ),
         ),
       ),

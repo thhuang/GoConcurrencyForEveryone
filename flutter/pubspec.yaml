@@ -28,9 +28,9 @@ flutter:
   assets:
     - assets/images/png/
   fonts:
-    - family: Rye
+    - family: UnifrakturMaguntia
       fonts:
-        - asset: assets/fonts/Rye/Rye-Regular.ttf
+        - asset: assets/fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf
     - family: FiraSans
       fonts:
         - asset: assets/fonts/FiraSans/FiraSans-Regular.ttf
