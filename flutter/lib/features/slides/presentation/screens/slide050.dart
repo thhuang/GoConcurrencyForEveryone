@@ -14,12 +14,41 @@ class Slide050 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SlideTextHero(
-            tag: 'Concurrency Models:\nSharing vs Passing',
+            tag: 'Concurrency Models:',
             child: SlideText(
-              'Concurrency Models:\nSharing vs Passing',
+              'Concurrency Models:',
               textAlign: TextAlign.center,
               style: headline1StyleWith(fontSize: 100.0, height: 1.5),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SlideTextHero(
+                tag: 'Sharing',
+                child: SlideText(
+                  'Sharing',
+                  textAlign: TextAlign.center,
+                  style: headline1StyleWith(fontSize: 100.0, height: 1.5),
+                ),
+              ),
+              SlideTextHero(
+                tag: ' vs ',
+                child: SlideText(
+                  ' vs ',
+                  textAlign: TextAlign.center,
+                  style: headline1StyleWith(fontSize: 100.0, height: 1.5),
+                ),
+              ),
+              SlideTextHero(
+                tag: 'Passing',
+                child: SlideText(
+                  'Passing',
+                  textAlign: TextAlign.center,
+                  style: headline1StyleWith(fontSize: 100.0, height: 1.5),
+                ),
+              ),
+            ],
           ),
         ],
       ),

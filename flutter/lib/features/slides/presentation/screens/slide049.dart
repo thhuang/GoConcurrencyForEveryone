@@ -61,12 +61,44 @@ class Slide049 extends StatelessWidget {
                 borderColor: Colors.red,
                 children: <Widget>[
                   SlideTextHero(
-                    tag: 'Concurrency Models:\nSharing vs Passing',
+                    tag: 'Concurrency Models:',
                     child: SlideText(
-                      'Concurrency Models:\nSharing vs Passing',
+                      'Concurrency Models:',
                       textAlign: TextAlign.center,
                       style: headline1StyleWith(fontSize: 45.0, height: 1.2),
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SlideTextHero(
+                        tag: 'Sharing',
+                        child: SlideText(
+                          'Sharing',
+                          textAlign: TextAlign.center,
+                          style:
+                              headline1StyleWith(fontSize: 45.0, height: 1.2),
+                        ),
+                      ),
+                      SlideTextHero(
+                        tag: ' vs ',
+                        child: SlideText(
+                          ' vs ',
+                          textAlign: TextAlign.center,
+                          style:
+                              headline1StyleWith(fontSize: 45.0, height: 1.2),
+                        ),
+                      ),
+                      SlideTextHero(
+                        tag: 'Passing',
+                        child: SlideText(
+                          'Passing',
+                          textAlign: TextAlign.center,
+                          style:
+                              headline1StyleWith(fontSize: 45.0, height: 1.2),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
