@@ -14,7 +14,7 @@ class Slide000 extends StatelessWidget {
       MediaQuery.of(context).size.height,
     );
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Center(
         child: SlideSizedBox(
           width: 900.0,
