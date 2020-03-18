@@ -18,7 +18,7 @@ class Slide000 extends StatelessWidget {
       child: Center(
         child: SlideSizedBox(
           width: 900.0,
-          height: 500.0,
+          height: 320.0,
           child: TypewriterAnimatedTextKit(
             text: [
               "Concurrency is a pattern!",
@@ -27,7 +27,7 @@ class Slide000 extends StatelessWidget {
             ],
             textStyle: Theme.of(context).textTheme.headline1.copyWith(
                   fontFamily: 'UnifrakturMaguntia',
-                  fontSize: 130.0 * scaleFactor,
+                  fontSize: 140.0 * scaleFactor,
                 ),
             textAlign: TextAlign.start,
             alignment: AlignmentDirectional.center,
