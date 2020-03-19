@@ -70,7 +70,6 @@ class _SlideRandomParticleBackgroundState
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
-    print(scaleFactor);
     return AnimatedBackground(
       behaviour: RandomParticleBehaviour(
         options: ParticleOptions(
