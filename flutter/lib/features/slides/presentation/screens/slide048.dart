@@ -82,7 +82,7 @@ class Slide048 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SlideText(
-                      'Doiing',
+                      'Doing',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontSize: 50.0,
