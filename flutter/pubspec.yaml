@@ -16,6 +16,8 @@ dependencies:
   dartz: ^0.8.9
   # text animation
   animated_text_kit: ^2.0.0
+  # background animation
+  animated_background: ^1.0.5
 
 dev_dependencies:
   flutter_test:

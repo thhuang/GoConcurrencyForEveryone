@@ -147,7 +147,7 @@ class SlideText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textScaleFactor = getScaleFactor(
+    final scaleFactor = getScaleFactor(
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height,
     );
@@ -155,7 +155,7 @@ class SlideText extends StatelessWidget {
       data,
       textAlign: textAlign,
       style: style,
-      textScaleFactor: textScaleFactor,
+      textScaleFactor: scaleFactor,
     );
   }
 }
