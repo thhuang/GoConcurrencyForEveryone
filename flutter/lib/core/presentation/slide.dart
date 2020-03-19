@@ -142,7 +142,7 @@ class SlideText extends StatelessWidget {
     this.data, {
     Key key,
     this.style,
-    this.textAlign,
+    this.textAlign = TextAlign.center,
   }) : super(key: key);
 
   @override

@@ -7,6 +7,7 @@ import 'features/slides/presentation/screens/slide001.dart';
 import 'features/slides/presentation/screens/slide002.dart';
 import 'features/slides/presentation/screens/slide003.dart';
 import 'features/slides/presentation/screens/slide004.dart';
+import 'features/slides/presentation/screens/slide005.dart';
 import 'features/slides/presentation/screens/slide006.dart';
 import 'features/slides/presentation/screens/slide007.dart';
 import 'features/slides/presentation/screens/slide008.dart';
@@ -82,7 +83,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 0, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 34, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
@@ -92,6 +93,11 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
             textTheme: TextTheme(
               headline1: TextStyle(
                 fontSize: 80.0,
+                color: Colors.white,
+                fontFamily: 'FiraSans',
+              ),
+              headline2: TextStyle(
+                fontSize: 45.0,
                 color: Colors.white,
                 fontFamily: 'FiraSans',
               ),
@@ -107,7 +113,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               ),
             ),
           ),
-          home: Slide000(),
+          home: Slide034(),
         ),
       ),
     );

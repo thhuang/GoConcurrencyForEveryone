@@ -7,7 +7,7 @@ class Slide002 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
+    final headline2 = Theme.of(context).textTheme.headline2;
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -20,7 +20,7 @@ class Slide002 extends StatelessWidget {
             child: SlideText(
               'Go Concurrency for Everyone',
               textAlign: TextAlign.center,
-              style: headline1StyleWith(fontSize: 65.0),
+              style: headline2.copyWith(fontSize: 65.0),
             ),
           ),
           SlideSizedBox(height: 30.0),
@@ -35,7 +35,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'Concurrency',
                       textAlign: TextAlign.center,
-                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
                     ),
                   ),
                   SlideTextHero(
@@ -43,7 +43,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'vs',
                       textAlign: TextAlign.center,
-                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
                     ),
                   ),
                   SlideTextHero(
@@ -51,7 +51,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'Parallelism',
                       textAlign: TextAlign.center,
-                      style: headline1StyleWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
                     ),
                   ),
                 ],
@@ -63,7 +63,7 @@ class Slide002 extends StatelessWidget {
                   SlideText(
                     'Concurrency Models:\nSharing vs Passing',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 45.0, height: 1.5),
+                    style: headline2.copyWith(fontSize: 45.0, height: 1.5),
                   ),
                 ],
               ),
@@ -79,7 +79,7 @@ class Slide002 extends StatelessWidget {
                   SlideText(
                     'Why Goroutine',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 45.0),
+                    style: headline2,
                   ),
                 ],
               ),
@@ -90,7 +90,7 @@ class Slide002 extends StatelessWidget {
                   SlideText(
                     'Goroutine Scheduler',
                     textAlign: TextAlign.center,
-                    style: headline1StyleWith(fontSize: 45.0),
+                    style: headline2,
                   ),
                 ],
               ),

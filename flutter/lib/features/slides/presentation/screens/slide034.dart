@@ -8,6 +8,9 @@ class Slide034 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final blackHeadline3 = Theme.of(context).textTheme.headline3.copyWith(
+          color: Colors.black,
+        );
     return Slide(
       backgroundColor: Colors.blue[50],
       child: SlidePadding.symmetric(
@@ -16,10 +19,20 @@ class Slide034 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SlideSizedBox(
-              height: 350.0,
-              child: SyncBreakfastFlow(),
+              height: 400.0,
+              child: Column(
+                children: <Widget>[
+                  Spacer(flex: 5),
+                  SlideText('Synchronous', style: blackHeadline3),
+                  Spacer(flex: 1),
+                  SyncBreakfastFlow(),
+                  Spacer(flex: 3),
+                  SlideText('Asynchronous', style: blackHeadline3),
+                  Spacer(flex: 1),
+                ],
+              ),
             ),
-            AsyncBreakfastFlow(),
+            Hero(tag: 'asyncbreakfastflow', child: AsyncBreakfastFlow()),
           ],
         ),
       ),

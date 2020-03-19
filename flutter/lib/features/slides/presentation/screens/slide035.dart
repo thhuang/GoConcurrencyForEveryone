@@ -34,7 +34,7 @@ class Slide035 extends StatelessWidget {
               ),
             ),
             SlideSizedBox(height: 120.0),
-            AsyncBreakfastFlow(),
+            Hero(tag: 'asyncbreakfastflow', child: AsyncBreakfastFlow()),
           ],
         ),
       ),
