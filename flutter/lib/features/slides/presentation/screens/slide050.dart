@@ -9,7 +9,7 @@ class Slide050 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

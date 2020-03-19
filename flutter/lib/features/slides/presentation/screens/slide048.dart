@@ -8,7 +8,7 @@ class Slide048 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: SlidePadding.symmetric(
         horizontal: 50.0,
         child: Column(
