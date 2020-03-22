@@ -1,11 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../../features/slides/presentation/logicholders/slides.dart';
-import '../settings.dart';
 import 'route_animations.dart';
 import 'scale_factors.dart';
 
@@ -36,15 +33,14 @@ class _SlideState extends State<Slide> {
 
   @override
   Widget build(BuildContext context) {
-    final width = min(
+    final width = getSlideWidth(
       MediaQuery.of(context).size.width,
-      MediaQuery.of(context).size.height * SLIDE_WIDTH_HEIGHT_RATIO,
-    );
-    final height = min(
       MediaQuery.of(context).size.height,
-      MediaQuery.of(context).size.width / SLIDE_WIDTH_HEIGHT_RATIO,
     );
-
+    final height = getSlideHeight(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
     return Scaffold(
       backgroundColor: Colors.black,
       body: Consumer<SlidesChangeNotifier>(
@@ -289,8 +285,8 @@ class SlideTextBox extends StatelessWidget {
 
   const SlideTextBox({
     Key key,
-    @required this.borderColor,
-    @required this.borderWidth,
+    this.borderColor = Colors.transparent,
+    this.borderWidth = 0.0,
     this.borderRadius,
     this.height,
     this.width,
@@ -299,9 +295,7 @@ class SlideTextBox extends StatelessWidget {
     this.crossAxisAlignment = CrossAxisAlignment.center,
     this.verticalPadding = 0.0,
     this.horizontalPadding = 0.0,
-  })  : assert(borderColor != null),
-        assert(borderWidth != null),
-        assert(children != null),
+  })  : assert(children != null),
         super(key: key);
 
   @override
@@ -396,6 +390,56 @@ class SlideImage extends StatelessWidget {
       imagePath,
       width: width == null ? null : width * scaleFactor,
       height: height == null ? null : height * scaleFactor,
+    );
+  }
+}
+
+class SlidePercentageBox extends StatelessWidget {
+  final Widget child;
+  final double heightPercentage;
+  final double widthPercentage;
+
+  const SlidePercentageBox({
+    Key key,
+    this.heightPercentage,
+    this.widthPercentage,
+    @required this.child,
+  })  : assert(child != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final width = getSlideWidth(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    final height = getSlideHeight(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return SizedBox(
+      height: height * (heightPercentage ?? 1.0),
+      width: width * (widthPercentage ?? 1.0),
+      child: child,
+    );
+  }
+}
+
+class SlideQuarterBox extends StatelessWidget {
+  final Widget child;
+
+  const SlideQuarterBox({
+    Key key,
+    @required this.child,
+  })  : assert(child != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlidePercentageBox(
+      heightPercentage: 0.5,
+      widthPercentage: 0.5,
+      child: child,
     );
   }
 }

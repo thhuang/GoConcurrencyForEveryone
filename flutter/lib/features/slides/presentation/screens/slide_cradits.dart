@@ -15,7 +15,42 @@ class SlideCradits extends StatelessWidget {
         children: <Widget>[
           SlideSizedBox(height: 30),
           SlideText(
-            'Icons made by Freepik from www.flaticon.com',
+            'Icons made by Freepik from Flaticon',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Joshua Rodriguez on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Camila Levita on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Gabi Miranda on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Jackson Schaal on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Code Shady on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Mike Kenneally on Unsplash',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Photo by Ali Yahya on Unsplash',
             textAlign: TextAlign.start,
             style: headline1StyleWith(fontSize: 30.0, height: 1.2),
           ),
