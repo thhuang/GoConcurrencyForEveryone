@@ -93,7 +93,7 @@ class Slide055 extends StatelessWidget {
                   child: SlideText(
                     'Constraints',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headline1,
                   ),
                 ),
               ),
@@ -138,10 +138,13 @@ class Slide056 extends StatelessWidget {
                   ),
                   SlideQuarterBox(
                     child: Center(
-                      child: SlideText(
-                        'Coffee Grinder',
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline5,
+                      child: SlideTextHero(
+                        tag: 'coffeegrinder',
+                        child: SlideText(
+                          'Coffee\nGrinder',
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
                       ),
                     ),
                   ),
@@ -175,10 +178,13 @@ class Slide056 extends StatelessWidget {
                   ),
                   SlideQuarterBox(
                     child: Center(
-                      child: SlideText(
-                        'Espresso Machine',
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline5,
+                      child: SlideTextHero(
+                        tag: 'espressomachine',
+                        child: SlideText(
+                          'Espresso\nMachine',
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
                       ),
                     ),
                   ),
@@ -200,10 +206,13 @@ class Slide056 extends StatelessWidget {
                   ),
                   SlideQuarterBox(
                     child: Center(
-                      child: SlideText(
-                        'Steam Wand',
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline5,
+                      child: SlideTextHero(
+                        tag: 'steamwand',
+                        child: SlideText(
+                          'Steam\nWand',
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
                       ),
                     ),
                   ),
