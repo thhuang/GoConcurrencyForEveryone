@@ -88,15 +88,7 @@ class Slide055 extends StatelessWidget {
           Column(
             children: <Widget>[
               GrindBeans(heightPercentage: 0.5, widthPercentage: 0.5),
-              SlideQuarterBox(
-                child: Center(
-                  child: SlideText(
-                    'Constraints',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                ),
-              ),
+              Barista(heightPercentage: 0.5, widthPercentage: 0.5),
             ],
           ),
           Column(

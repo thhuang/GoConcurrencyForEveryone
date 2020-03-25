@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
 import '../../../../core/settings.dart';
+import 'arrows.dart';
 
 class Cocoa extends StatelessWidget {
   final double height;
@@ -370,22 +371,6 @@ class BreakfastFlow extends StatelessWidget {
         DoubleToastFlow(),
         Spacer(flex: 5),
       ],
-    );
-  }
-}
-
-class ArrowRight extends StatelessWidget {
-  final String id;
-  const ArrowRight({
-    Key key,
-    this.id = '',
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Hero(
-      tag: 'arrow' + id,
-      child: SlideImage(ARROW_RIGHT, width: 40.0),
     );
   }
 }
