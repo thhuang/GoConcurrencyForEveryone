@@ -27,8 +27,8 @@ class Slide058 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 100.0,
-            left: 100.0,
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: FLOW_START_LEFT_POSITION,
             child: CoffeeCup(),
           ),
         ],
@@ -48,8 +48,8 @@ class Slide059 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 135.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION,
             child: CoffeeCup(),
           ),
         ],
@@ -69,8 +69,8 @@ class Slide060 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 435.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCup(),
           ),
         ],
@@ -90,8 +90,8 @@ class Slide061 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 735.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
             child: CoffeeCup(),
           ),
         ],
@@ -111,13 +111,13 @@ class Slide062 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 735.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
             child: CoffeeCup(),
           ),
           SlidePositioned(
-            top: 100.0,
-            left: 100.0,
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: FLOW_START_LEFT_POSITION,
             child: CoffeeCup(id: '0'),
           ),
         ],
@@ -137,13 +137,13 @@ class Slide063 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 735.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
             child: CoffeeCup(),
           ),
           SlidePositioned(
-            top: 230.0,
-            left: 135.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION,
             child: CoffeeCup(id: '0'),
           ),
         ],
@@ -163,13 +163,18 @@ class Slide064 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 435.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
+            child: CoffeeCup(),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCup(id: '0'),
           ),
           SlidePositioned(
-            top: 100.0,
-            left: 100.0,
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: FLOW_START_LEFT_POSITION,
             child: CoffeeCupEmpty(id: '1'),
           ),
         ],
@@ -189,13 +194,13 @@ class Slide065 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 435.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCup(id: '0'),
           ),
           SlidePositioned(
-            top: 230.0,
-            left: 135.2,
+            bottom: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION,
             child: CoffeeCupEmpty(id: '1'),
           ),
         ],
@@ -215,14 +220,253 @@ class Slide066 extends StatelessWidget {
         children: <Widget>[
           Center(child: CoffeeFlow()),
           SlidePositioned(
-            top: 230.0,
-            left: 435.2,
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCup(id: '0'),
           ),
           SlidePositioned(
-            top: 290.0,
-            left: 435.2,
+            bottom: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCupEmpty(id: '1'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide067 extends StatelessWidget {
+  Slide067({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(child: CoffeeFlow(noHero: true)),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+          SlidePositioned(
+            top: 250.0,
+            left: 510.0,
+            child: Explode(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide068 extends StatelessWidget {
+  Slide068({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              noHero: true,
+              espressoMachineBorderColor: Colors.red,
+            ),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide069 extends StatelessWidget {
+  Slide069({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              noHero: true,
+              coffeeGrinderBorderColor: Colors.black,
+              espressoMachineBorderColor: Colors.red,
+              steamWandBorderColor: Colors.black,
+            ),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide070 extends StatelessWidget {
+  Slide070({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              noHero: true,
+              coffeeGrinderBorderColor: Colors.black,
+              espressoMachineBorderColor: Colors.black,
+              steamWandBorderColor: Colors.red,
+            ),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide071 extends StatelessWidget {
+  Slide071({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              noHero: true,
+              coffeeGrinderBorderColor: Colors.black,
+              espressoMachineBorderColor: Colors.red,
+              steamWandBorderColor: Colors.red,
+            ),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide072 extends StatelessWidget {
+  Slide072({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              noHero: true,
+              coffeeGrinderBorderColor: Colors.red,
+              espressoMachineBorderColor: Colors.red,
+              steamWandBorderColor: Colors.red,
+            ),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
+            child: CoffeeCup(id: '0'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '1'),
+          ),
+          SlidePositioned(
+            top: FLOW_EXECUTE_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '2'),
+          ),
+          SlidePositioned(
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '3'),
+          ),
+          SlidePositioned(
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '4'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '5'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION,
+            child: CoffeeCupEmpty(id: '6'),
+          ),
+          SlidePositioned(
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: COFFEE_GRINDER_LEFT_POSITION + 100.0,
+            child: CoffeeCupEmpty(id: '7'),
+          ),
+          SlidePositioned(
+            top: FLOW_WAIT_VERTICAL_POSITION,
+            left: ESPRESSO_MACHINE_LEFT_POSITION + 100.0,
+            child: CoffeeCupEmpty(id: '8'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION + 100.0,
+            child: CoffeeCupEmpty(id: '9'),
+          ),
+          SlidePositioned(
+            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            left: STEAM_WAND_LEFT_POSITION + 200.0,
+            child: CoffeeCupEmpty(id: '10'),
           ),
         ],
       ),
@@ -235,12 +479,14 @@ class CoffeeFlow extends StatelessWidget {
   final Color espressoMachineBorderColor;
   final Color steamWandBorderColor;
   final bool showArrows;
+  final bool noHero;
   const CoffeeFlow({
     Key key,
     this.coffeeGrinderBorderColor = Colors.transparent,
     this.espressoMachineBorderColor = Colors.transparent,
     this.steamWandBorderColor = Colors.transparent,
     this.showArrows = false,
+    this.noHero = false,
   }) : super(key: key);
 
   @override
@@ -250,42 +496,60 @@ class CoffeeFlow extends StatelessWidget {
       children: <Widget>[
         CoffeeComponentBox(
           borderColor: coffeeGrinderBorderColor,
-          child: SlideTextHero(
-            tag: 'coffeegrinder',
-            child: SlideText(
-              'Coffee\nGrinder',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ),
+          child: noHero
+              ? SlideText(
+                  'Coffee\nGrinder',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline4,
+                )
+              : SlideTextHero(
+                  tag: 'coffeegrinder',
+                  child: SlideText(
+                    'Coffee\nGrinder',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
         ),
         SlideSizedBox(width: 20.0),
         showArrows ? ArrowRight(id: '0') : SlideSizedBox(width: 40.0),
         SlideSizedBox(width: 20.0),
         CoffeeComponentBox(
           borderColor: espressoMachineBorderColor,
-          child: SlideTextHero(
-            tag: 'espressomachine',
-            child: SlideText(
-              'Espresso\nMachine',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ),
+          child: noHero
+              ? SlideText(
+                  'Espresso\nMachine',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline4,
+                )
+              : SlideTextHero(
+                  tag: 'espressomachine',
+                  child: SlideText(
+                    'Espresso\nMachine',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
         ),
         SlideSizedBox(width: 20.0),
         showArrows ? ArrowRight(id: '1') : SlideSizedBox(width: 40.0),
         SlideSizedBox(width: 20.0),
         CoffeeComponentBox(
           borderColor: steamWandBorderColor,
-          child: SlideTextHero(
-            tag: 'steamwand',
-            child: SlideText(
-              'Steam\nWand',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ),
+          child: noHero
+              ? SlideText(
+                  'Steam\nWand',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline4,
+                )
+              : SlideTextHero(
+                  tag: 'steamwand',
+                  child: SlideText(
+                    'Steam\nWand',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
         ),
       ],
     );
@@ -363,3 +627,26 @@ class CoffeeCupEmpty extends StatelessWidget {
         : SlideImage(COFFEE_CUP, height: height);
   }
 }
+
+class Explode extends StatelessWidget {
+  final double height;
+  final String id;
+
+  const Explode({
+    Key key,
+    this.id = '',
+    this.height = 180.0,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SlideImage(EXPLODE, height: height);
+  }
+}
+
+const FLOW_START_LEFT_POSITION = 135.2;
+const COFFEE_GRINDER_LEFT_POSITION = 135.2;
+const ESPRESSO_MACHINE_LEFT_POSITION = 435.2;
+const STEAM_WAND_LEFT_POSITION = 735.2;
+const FLOW_EXECUTE_VERTICAL_POSITION = 230.0;
+const FLOW_WAIT_VERTICAL_POSITION = 100.0;
