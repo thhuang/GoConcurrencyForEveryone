@@ -44,48 +44,78 @@ class _SlideState extends State<Slide> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Consumer<SlidesChangeNotifier>(
-        builder: (context, slide, _) => Focus(
-          focusNode: _focusNode,
-          autofocus: true,
-          onKey: (FocusNode node, RawKeyEvent event) {
-            if (event.runtimeType == RawKeyUpEvent) {
-              final isRight = event.logicalKey == LogicalKeyboardKey.arrowRight;
-              final isLeft = event.logicalKey == LogicalKeyboardKey.arrowLeft;
-              final isUp = event.logicalKey == LogicalKeyboardKey.arrowUp;
-              final isDown = event.logicalKey == LogicalKeyboardKey.arrowDown;
-              if (isRight || isDown) {
-                slide.nextSlide(
-                  () => Navigator.pushReplacement(
-                    context,
-                    AnimatedRoute.build(
-                      type: widget.animatedRouteType,
-                      currentPage: slide.lastSlide,
-                      nextPage: slide.currentSlide,
-                    ),
+        builder: (context, slide, _) => GestureDetector(
+          onPanUpdate: (detail) {
+            print(detail.delta.dx);
+            if (detail.delta.dx < -5.0) {
+              slide.nextSlide(
+                () => Navigator.pushReplacement(
+                  context,
+                  AnimatedRoute.build(
+                    type: widget.animatedRouteType,
+                    currentPage: slide.lastSlide,
+                    nextPage: slide.currentSlide,
                   ),
-                );
-              } else if (isLeft || isUp) {
-                slide.previousSlide(
-                  () => Navigator.pushReplacement(
-                    context,
-                    AnimatedRoute.build(
-                      // Use fade animation for returning to previous slide
-                      type: AnimatedRouteType.fade,
-                      currentPage: slide.lastSlide,
-                      nextPage: slide.currentSlide,
-                    ),
+                ),
+              );
+            } else if (detail.delta.dx > 5.0) {
+              slide.previousSlide(
+                () => Navigator.pushReplacement(
+                  context,
+                  AnimatedRoute.build(
+                    // Use fade animation for returning to previous slide
+                    type: AnimatedRouteType.fade,
+                    currentPage: slide.lastSlide,
+                    nextPage: slide.currentSlide,
                   ),
-                );
-              }
+                ),
+              );
             }
-            return false;
           },
-          child: Center(
-            child: Container(
-                height: height,
-                width: width,
-                child: widget.child,
-                color: widget.backgroundColor),
+          child: Focus(
+            focusNode: _focusNode,
+            autofocus: true,
+            onKey: (FocusNode node, RawKeyEvent event) {
+              if (event.runtimeType == RawKeyUpEvent) {
+                final isRight =
+                    event.logicalKey == LogicalKeyboardKey.arrowRight;
+                final isLeft = event.logicalKey == LogicalKeyboardKey.arrowLeft;
+                final isUp = event.logicalKey == LogicalKeyboardKey.arrowUp;
+                final isDown = event.logicalKey == LogicalKeyboardKey.arrowDown;
+                if (isRight || isDown) {
+                  slide.nextSlide(
+                    () => Navigator.pushReplacement(
+                      context,
+                      AnimatedRoute.build(
+                        type: widget.animatedRouteType,
+                        currentPage: slide.lastSlide,
+                        nextPage: slide.currentSlide,
+                      ),
+                    ),
+                  );
+                } else if (isLeft || isUp) {
+                  slide.previousSlide(
+                    () => Navigator.pushReplacement(
+                      context,
+                      AnimatedRoute.build(
+                        // Use fade animation for returning to previous slide
+                        type: AnimatedRouteType.fade,
+                        currentPage: slide.lastSlide,
+                        nextPage: slide.currentSlide,
+                      ),
+                    ),
+                  );
+                }
+              }
+              return false;
+            },
+            child: Center(
+              child: Container(
+                  height: height,
+                  width: width,
+                  child: widget.child,
+                  color: widget.backgroundColor),
+            ),
           ),
         ),
       ),
