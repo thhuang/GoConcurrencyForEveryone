@@ -1,3 +1,4 @@
+import 'package:GCFE/features/slides/presentation/screens/to_be_continued.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -118,6 +119,7 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide087(),
     Slide088(),
     Slide089(),
+    ToBeContinued(),
     SlideCradits(),
   ];
 
@@ -127,13 +129,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 0, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 89, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: Slide000(),
+          home: Slide089(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(
