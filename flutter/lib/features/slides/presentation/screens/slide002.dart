@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
+import '../widgets/agenda.dart';
 
 class Slide002 extends StatelessWidget {
   Slide002({Key key}) : super(key: key);
@@ -35,7 +36,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'Concurrency',
                       textAlign: TextAlign.center,
-                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(height: 1.2),
                     ),
                   ),
                   SlideTextHero(
@@ -43,7 +44,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'vs',
                       textAlign: TextAlign.center,
-                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(height: 1.2),
                     ),
                   ),
                   SlideTextHero(
@@ -51,7 +52,7 @@ class Slide002 extends StatelessWidget {
                     child: SlideText(
                       'Parallelism',
                       textAlign: TextAlign.center,
-                      style: headline2.copyWith(fontSize: 45.0, height: 1.2),
+                      style: headline2.copyWith(height: 1.2),
                     ),
                   ),
                 ],
@@ -63,7 +64,7 @@ class Slide002 extends StatelessWidget {
                   SlideText(
                     'Concurrency Models:\nSharing vs Passing',
                     textAlign: TextAlign.center,
-                    style: headline2.copyWith(fontSize: 45.0, height: 1.5),
+                    style: headline2.copyWith(height: 1.5),
                   ),
                 ],
               ),
@@ -77,9 +78,9 @@ class Slide002 extends StatelessWidget {
                 borderColor: Colors.yellow,
                 children: <Widget>[
                   SlideText(
-                    'Why Goroutine',
+                    'Channel Primitive\n&\nGoroutine',
                     textAlign: TextAlign.center,
-                    style: headline2,
+                    style: headline2.copyWith(height: 1.2),
                   ),
                 ],
               ),
@@ -98,32 +99,6 @@ class Slide002 extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class AgendaBox extends StatelessWidget {
-  final Color borderColor;
-  final List<Widget> children;
-  const AgendaBox({
-    Key key,
-    this.borderColor = Colors.green,
-    @required this.children,
-  })  : assert(children != null),
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SlideTextBox(
-      mainAxisAlignment: MainAxisAlignment.center,
-      horizontalPadding: 12.0,
-      verticalPadding: 12.0,
-      borderColor: borderColor,
-      borderWidth: 5.0,
-      borderRadius: BorderRadius.circular(20.0),
-      height: 230.0,
-      width: 480.0,
-      children: children,
     );
   }
 }

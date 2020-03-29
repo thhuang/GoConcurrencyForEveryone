@@ -443,3 +443,29 @@ class SlideQuarterBox extends StatelessWidget {
     );
   }
 }
+
+class SlideDivider extends StatelessWidget {
+  final height;
+  final thickness;
+  final color;
+
+  const SlideDivider({
+    Key key,
+    this.height = 16.0,
+    this.thickness = 1.0,
+    this.color = Colors.black,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return Divider(
+      height: height * scaleFactor,
+      thickness: thickness * scaleFactor,
+      color: color,
+    );
+  }
+}

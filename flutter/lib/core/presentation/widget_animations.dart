@@ -28,8 +28,7 @@ class _RotatorState extends State<Rotator> with SingleTickerProviderStateMixin {
     animationController = AnimationController(
       vsync: this,
       duration: Duration(seconds: widget.seconds),
-    );
-    animationController.repeat();
+    )..repeat();
   }
 
   @override

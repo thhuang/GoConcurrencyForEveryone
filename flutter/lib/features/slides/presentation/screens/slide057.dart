@@ -1,8 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
-import '../../../../core/settings.dart';
-import '../widgets/arrows.dart';
+import '../widgets/coffee.dart';
 
 class Slide057 extends StatelessWidget {
   Slide057({Key key}) : super(key: key);
@@ -266,8 +267,46 @@ class Slide067 extends StatelessWidget {
   }
 }
 
-class Slide068 extends StatelessWidget {
+class Slide068 extends StatefulWidget {
   Slide068({Key key}) : super(key: key);
+
+  @override
+  _Slide068State createState() => _Slide068State();
+}
+
+class _Slide068State extends State<Slide068>
+    with SingleTickerProviderStateMixin {
+  AnimationController _animationController;
+  var displacement = 0.0;
+  final duration = Duration(milliseconds: 300);
+
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      value: 0.8,
+      duration: duration,
+      vsync: this,
+    )
+      ..addListener(() {
+        setState(() {
+          displacement = pow(_animationController.value, 1.8) * 60.0;
+        });
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _animationController.reverse();
+        } else if (status == AnimationStatus.dismissed) {
+          _animationController.forward();
+        }
+      })
+      ..forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -287,7 +326,7 @@ class Slide068 extends StatelessWidget {
             child: CoffeeCup(id: '0'),
           ),
           SlidePositioned(
-            bottom: FLOW_WAIT_VERTICAL_POSITION,
+            bottom: FLOW_WAIT_VERTICAL_POSITION + displacement,
             left: ESPRESSO_MACHINE_LEFT_POSITION,
             child: CoffeeCupEmpty(id: '1'),
           ),
@@ -407,7 +446,6 @@ class Slide072 extends StatelessWidget {
         children: <Widget>[
           Center(
             child: CoffeeFlow(
-              noHero: true,
               coffeeGrinderBorderColor: Colors.red,
               espressoMachineBorderColor: Colors.red,
               steamWandBorderColor: Colors.red,
@@ -474,179 +512,93 @@ class Slide072 extends StatelessWidget {
   }
 }
 
-class CoffeeFlow extends StatelessWidget {
-  final Color coffeeGrinderBorderColor;
-  final Color espressoMachineBorderColor;
-  final Color steamWandBorderColor;
-  final bool showArrows;
-  final bool noHero;
-  const CoffeeFlow({
-    Key key,
-    this.coffeeGrinderBorderColor = Colors.transparent,
-    this.espressoMachineBorderColor = Colors.transparent,
-    this.steamWandBorderColor = Colors.transparent,
-    this.showArrows = false,
-    this.noHero = false,
-  }) : super(key: key);
+class Slide073 extends StatelessWidget {
+  Slide073({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        CoffeeComponentBox(
-          borderColor: coffeeGrinderBorderColor,
-          child: noHero
-              ? SlideText(
-                  'Coffee\nGrinder',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline4,
-                )
-              : SlideTextHero(
-                  tag: 'coffeegrinder',
-                  child: SlideText(
-                    'Coffee\nGrinder',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                ),
-        ),
-        SlideSizedBox(width: 20.0),
-        showArrows ? ArrowRight(id: '0') : SlideSizedBox(width: 40.0),
-        SlideSizedBox(width: 20.0),
-        CoffeeComponentBox(
-          borderColor: espressoMachineBorderColor,
-          child: noHero
-              ? SlideText(
-                  'Espresso\nMachine',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline4,
-                )
-              : SlideTextHero(
-                  tag: 'espressomachine',
-                  child: SlideText(
-                    'Espresso\nMachine',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                ),
-        ),
-        SlideSizedBox(width: 20.0),
-        showArrows ? ArrowRight(id: '1') : SlideSizedBox(width: 40.0),
-        SlideSizedBox(width: 20.0),
-        CoffeeComponentBox(
-          borderColor: steamWandBorderColor,
-          child: noHero
-              ? SlideText(
-                  'Steam\nWand',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headline4,
-                )
-              : SlideTextHero(
-                  tag: 'steamwand',
-                  child: SlideText(
-                    'Steam\nWand',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                ),
-        ),
-      ],
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(child: CoffeeFlow(multiResources: true)),
+        ],
+      ),
     );
   }
 }
 
-class CoffeeComponentBox extends StatelessWidget {
-  final Color borderColor;
-  final Widget child;
-  const CoffeeComponentBox({
-    Key key,
-    this.borderColor = Colors.black,
-    @required this.child,
-  })  : assert(child != null),
-        super(key: key);
+class Slide074 extends StatelessWidget {
+  Slide074({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SlideTextBox(
-      mainAxisAlignment: MainAxisAlignment.center,
-      horizontalPadding: 12.0,
-      verticalPadding: 12.0,
-      borderColor: borderColor,
-      borderWidth: 5.0,
-      borderRadius: BorderRadius.circular(20.0),
-      height: 150.0,
-      width: 220.0,
-      children: [child],
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: CoffeeFlow(
+              multiResources: true,
+              coffeeGrinderBorderColor: Colors.black,
+              espressoMachineBorderColor: Colors.black,
+              steamWandBorderColor: Colors.black,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
 
-class CoffeeCup extends StatelessWidget {
-  final double height;
-  final bool hero;
-  final String id;
-
-  const CoffeeCup({
-    Key key,
-    this.hero = true,
-    this.id = '',
-    this.height = 100.0,
-  }) : super(key: key);
+class Slide075 extends StatelessWidget {
+  Slide075({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return hero
-        ? Hero(
-            tag: 'coffeecup' + id,
-            child: SlideImage(COFFEE_CUP, height: height),
-          )
-        : SlideImage(COFFEE_CUP, height: height);
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Column(
+        children: <Widget>[
+          SlideSizedBox(height: 260.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CoffeeCup(),
+              SlideSizedBox(width: 280.0),
+              CoffeeCupEmpty(),
+            ],
+          ),
+          SlideSizedBox(height: 50.0),
+          Center(child: CoffeeFlow(shrink: true)),
+        ],
+      ),
+    );
   }
 }
 
-class CoffeeCupEmpty extends StatelessWidget {
-  final double height;
-  final bool hero;
-  final String id;
-
-  const CoffeeCupEmpty({
-    Key key,
-    this.hero = true,
-    this.id = '',
-    this.height = 100.0,
-  }) : super(key: key);
+class Slide076 extends StatelessWidget {
+  Slide076({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return hero
-        ? Hero(
-            tag: 'coffeecupempty' + id,
-            child: SlideImage(COFFEE_CUP_EMPTY, height: height),
-          )
-        : SlideImage(COFFEE_CUP, height: height);
+    return Slide(
+      backgroundColor: Colors.brown[50],
+      child: Column(
+        children: <Widget>[
+          SlideSizedBox(height: 90.0),
+          SlideTextBox(
+            height: 170.0,
+            children: <Widget>[
+              SlideText(
+                'Communicate via Memory Sharing',
+                style: Theme.of(context).textTheme.headline5,
+              )
+            ],
+          ),
+          SharedMemoryCartoon(),
+        ],
+      ),
+    );
   }
 }
-
-class Explode extends StatelessWidget {
-  final double height;
-  final String id;
-
-  const Explode({
-    Key key,
-    this.id = '',
-    this.height = 180.0,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SlideImage(EXPLODE, height: height);
-  }
-}
-
-const FLOW_START_LEFT_POSITION = 135.2;
-const COFFEE_GRINDER_LEFT_POSITION = 135.2;
-const ESPRESSO_MACHINE_LEFT_POSITION = 435.2;
-const STEAM_WAND_LEFT_POSITION = 735.2;
-const FLOW_EXECUTE_VERTICAL_POSITION = 230.0;
-const FLOW_WAIT_VERTICAL_POSITION = 100.0;

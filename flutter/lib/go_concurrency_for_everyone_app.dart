@@ -21,6 +21,9 @@ import 'features/slides/presentation/screens/slide049.dart';
 import 'features/slides/presentation/screens/slide050.dart';
 import 'features/slides/presentation/screens/slide051.dart';
 import 'features/slides/presentation/screens/slide057.dart';
+import 'features/slides/presentation/screens/slide077.dart';
+import 'features/slides/presentation/screens/slide087.dart';
+import 'features/slides/presentation/screens/slide089.dart';
 import 'features/slides/presentation/screens/slide_cradits.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
@@ -98,6 +101,23 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide070(),
     Slide071(),
     Slide072(),
+    Slide073(),
+    Slide074(),
+    Slide075(),
+    Slide076(),
+    Slide077(),
+    Slide078(),
+    Slide079(),
+    Slide080(),
+    Slide081(),
+    Slide082(),
+    Slide083(),
+    Slide084(),
+    Slide085(),
+    Slide086(),
+    Slide087(),
+    Slide088(),
+    Slide089(),
     SlideCradits(),
   ];
 
@@ -107,12 +127,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 68, // TODO: set to [0] after the slides are finished
+        initialSlideIndex: 0, // TODO: set to [0] after the slides are finished
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
+          home: Slide000(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(
@@ -135,9 +156,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
                 color: Colors.black,
                 fontFamily: 'FiraSans',
               ),
+              headline5: TextStyle(
+                fontSize: 70.0,
+                color: Colors.black,
+                fontFamily: 'FiraSans',
+              ),
             ),
           ),
-          home: Slide068(),
         ),
       ),
     );
