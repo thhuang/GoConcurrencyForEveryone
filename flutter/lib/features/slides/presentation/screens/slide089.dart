@@ -109,10 +109,13 @@ class Slide089 extends StatelessWidget {
               AgendaBox(
                 borderColor: Colors.yellow,
                 children: <Widget>[
-                  SlideText(
-                    'Channel Primitive\n&\nGoroutine',
-                    textAlign: TextAlign.center,
-                    style: headline2.copyWith(height: 1.2),
+                  SlideTextHero(
+                    tag: 'Channel Primitive\n&\nGoroutine',
+                    child: SlideText(
+                      'Channel Primitive\n&\nGoroutine',
+                      textAlign: TextAlign.center,
+                      style: headline2.copyWith(height: 1.2),
+                    ),
                   ),
                 ],
               ),
