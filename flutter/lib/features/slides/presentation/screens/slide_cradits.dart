@@ -54,6 +54,16 @@ class SlideCradits extends StatelessWidget {
             textAlign: TextAlign.start,
             style: headline1StyleWith(fontSize: 30.0, height: 1.2),
           ),
+          SlideText(
+            'Effective Go',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
+          SlideText(
+            'Go in Practice',
+            textAlign: TextAlign.start,
+            style: headline1StyleWith(fontSize: 30.0, height: 1.2),
+          ),
         ],
       ),
     );
