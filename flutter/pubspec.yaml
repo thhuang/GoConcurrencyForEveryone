@@ -18,6 +18,8 @@ dependencies:
   animated_text_kit: ^2.0.0
   # background animation
   animated_background: ^1.0.5
+  # draw arrows
+  arrow_path: ^1.0.0
 
 dev_dependencies:
   flutter_test:

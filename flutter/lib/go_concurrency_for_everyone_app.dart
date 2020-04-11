@@ -28,6 +28,8 @@ import 'features/slides/presentation/screens/slide090.dart';
 import 'features/slides/presentation/screens/slide091.dart';
 import 'features/slides/presentation/screens/slide098.dart';
 import 'features/slides/presentation/screens/slide112.dart';
+import 'features/slides/presentation/screens/slide113.dart';
+import 'features/slides/presentation/screens/slide114.dart';
 import 'features/slides/presentation/screens/slide_cradits.dart';
 import 'features/slides/presentation/screens/to_be_continued.dart';
 
@@ -146,6 +148,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide110(),
     Slide111(),
     Slide112(),
+    Slide113(),
+    Slide114(),
+    Slide115(),
+    Slide116(),
+    Slide117(),
+    Slide118(),
+    Slide119(),
     ToBeContinued(),
     SlideCradits(),
   ];
@@ -157,13 +166,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
       create: (_) => SlidesChangeNotifier(
         slides: slides,
         // TODO: set to [0] after the slides are finished
-        initialSlideIndex: 0,
+        initialSlideIndex: 119,
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: Slide000(),
+          home: Slide119(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(
@@ -189,6 +198,11 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
               headline5: TextStyle(
                 fontSize: 70.0,
                 color: Colors.black,
+                fontFamily: 'FiraSans',
+              ),
+              headline6: TextStyle(
+                fontSize: 35.0,
+                color: Colors.white,
                 fontFamily: 'FiraSans',
               ),
             ),

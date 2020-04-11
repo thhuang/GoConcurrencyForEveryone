@@ -499,3 +499,87 @@ class SlideDivider extends StatelessWidget {
     );
   }
 }
+
+class SlideVerticalDivider extends StatelessWidget {
+  final width;
+  final thickness;
+  final color;
+
+  const SlideVerticalDivider({
+    Key key,
+    this.width = 16.0,
+    this.thickness = 1.0,
+    this.color = Colors.black,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final scaleFactor = getScaleFactor(
+      MediaQuery.of(context).size.width,
+      MediaQuery.of(context).size.height,
+    );
+    return VerticalDivider(
+      width: width * scaleFactor,
+      thickness: thickness * scaleFactor,
+      color: color,
+    );
+  }
+}
+
+class SlideVerticalDash extends StatelessWidget {
+  final double width;
+  final double thickness;
+  final Color color;
+  final int dashCount;
+  final double dashLength;
+  final double dashSpacing;
+
+  const SlideVerticalDash({
+    Key key,
+    this.width = 16.0,
+    this.thickness = 3.0,
+    this.color = Colors.white,
+    this.dashCount = 3,
+    this.dashLength = 16.0,
+    this.dashSpacing = 8.0,
+  })  : assert(width != null),
+        assert(thickness != null),
+        assert(dashCount != null && dashCount > 0),
+        assert(dashLength != null),
+        assert(dashSpacing != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        SlideSizedBox(
+          height: dashLength,
+          width: width,
+          child: SlideVerticalDivider(
+            thickness: thickness,
+            color: color,
+          ),
+        ),
+        for (var i = 0; i < dashCount - 1; i++) ...[
+          SlideSizedBox(
+            height: dashSpacing,
+            width: width,
+            child: SlideVerticalDivider(
+              thickness: thickness,
+              color: Colors.transparent,
+            ),
+          ),
+          SlideSizedBox(
+            height: dashLength,
+            width: width,
+            child: SlideVerticalDivider(
+              thickness: thickness,
+              color: color,
+            ),
+          ),
+        ]
+      ],
+    );
+  }
+}

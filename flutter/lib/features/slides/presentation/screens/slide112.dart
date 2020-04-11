@@ -31,29 +31,10 @@ class Slide112 extends StatelessWidget {
               AgendaBox(
                 borderColor: Colors.green,
                 children: <Widget>[
-                  SlideTextHero(
-                    tag: 'Concurrency',
-                    child: SlideText(
-                      'Concurrency',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
-                  ),
-                  SlideTextHero(
-                    tag: 'vs',
-                    child: SlideText(
-                      'vs',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
-                  ),
-                  SlideTextHero(
-                    tag: 'Parallelism',
-                    child: SlideText(
-                      'Parallelism',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
+                  SlideText(
+                    'Concurrency\nvs\nParallelism',
+                    textAlign: TextAlign.center,
+                    style: headline2.copyWith(height: 1.2),
                   ),
                 ],
               ),
@@ -61,42 +42,10 @@ class Slide112 extends StatelessWidget {
               AgendaBox(
                 borderColor: Colors.red,
                 children: <Widget>[
-                  SlideTextHero(
-                    tag: 'Concurrency Models:',
-                    child: SlideText(
-                      'Concurrency Models:',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SlideTextHero(
-                        tag: 'Sharing',
-                        child: SlideText(
-                          'Sharing',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                      SlideTextHero(
-                        tag: ' vs ',
-                        child: SlideText(
-                          ' vs ',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                      SlideTextHero(
-                        tag: 'Passing',
-                        child: SlideText(
-                          'Passing',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                    ],
+                  SlideText(
+                    'Concurrency Models:\nSharing vs Passing',
+                    textAlign: TextAlign.center,
+                    style: headline2.copyWith(height: 1.5),
                   ),
                 ],
               ),
@@ -149,15 +98,18 @@ class Slide112 extends StatelessWidget {
                 ],
               ),
               SlideSizedBox(width: 30.0),
-              AgendaBox(
-                borderColor: Colors.blue,
-                children: <Widget>[
-                  SlideText(
-                    'Goroutine Scheduler',
-                    textAlign: TextAlign.center,
-                    style: headline2,
-                  ),
-                ],
+              SlideTextHero(
+                tag: 'Goroutine Scheduler',
+                child: AgendaBox(
+                  borderColor: Colors.blue,
+                  children: <Widget>[
+                    SlideText(
+                      'Goroutine Scheduler',
+                      textAlign: TextAlign.center,
+                      style: headline2,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
