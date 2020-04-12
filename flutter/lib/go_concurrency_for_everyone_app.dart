@@ -165,6 +165,14 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide126(),
     Slide127(),
     Slide128(),
+    Slide129(),
+    Slide130(),
+    Slide131(),
+    Slide132(),
+    Slide133(),
+    Slide134(),
+    Slide135(),
+    Slide136(),
     ToBeContinued(),
     SlideCradits(),
   ];
@@ -176,13 +184,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
       create: (_) => SlidesChangeNotifier(
         slides: slides,
         // TODO: set to [0] after the slides are finished
-        initialSlideIndex: 128,
+        initialSlideIndex: 136,
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: Slide128(),
+          home: Slide136(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(

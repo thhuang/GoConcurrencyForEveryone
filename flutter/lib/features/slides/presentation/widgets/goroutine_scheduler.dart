@@ -6,29 +6,48 @@ import '../../../../core/presentation/scale_factors.dart';
 import '../../../../core/presentation/slide.dart';
 
 class P extends StatelessWidget {
+  final int id;
   final bool disableText;
 
   const P({
     Key key,
+    this.id,
     this.disableText = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final textStyle = Theme.of(context).textTheme.headline6;
-    return SlideTextBox(
-      height: 55.0,
-      width: 55.0,
-      borderWidth: 5.0,
-      borderColor: Colors.red,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        SlideText(
-          disableText ? '' : 'P',
-          style: textStyle,
-        ),
-      ],
-    );
+    return id == null
+        ? SlideTextBox(
+            height: 55.0,
+            width: 55.0,
+            borderWidth: 5.0,
+            borderColor: Colors.red,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SlideText(
+                disableText ? '' : 'P',
+                style: textStyle,
+              ),
+            ],
+          )
+        : Hero(
+            tag: 'p' + id.toString(),
+            child: SlideTextBox(
+              height: 55.0,
+              width: 55.0,
+              borderWidth: 5.0,
+              borderColor: Colors.red,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SlideText(
+                  disableText ? '' : 'P',
+                  style: textStyle,
+                ),
+              ],
+            ),
+          );
   }
 }
 
