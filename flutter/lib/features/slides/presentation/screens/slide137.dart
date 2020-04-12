@@ -437,6 +437,88 @@ class Slide142 extends StatelessWidget {
                         SlideSizedBox(height: 60.0),
                         Row(
                           children: <Widget>[
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 0),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide143 extends StatelessWidget {
+  Slide143({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Create Goroutines',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
                             PWithQueue(children: <Widget>[
                               G(id: 2, backgroundColor: Colors.lightGreen),
                             ]),
@@ -478,8 +560,8 @@ class Slide142 extends StatelessWidget {
   }
 }
 
-class Slide143 extends StatelessWidget {
-  Slide143({Key key}) : super(key: key);
+class Slide144 extends StatelessWidget {
+  Slide144({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -564,6 +646,1087 @@ class Slide143 extends StatelessWidget {
   }
 }
 
+class Slide145 extends StatelessWidget {
+  Slide145({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Blocking System Calls',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 2, backgroundColor: Colors.lightGreen),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 0),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide146 extends StatelessWidget {
+  Slide146({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Blocking System Calls',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          SlideSizedBox(
+            height: 480.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    MachineParkingLot(children: <Widget>[]),
+                    PandingGoroutines(children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          M(id: 0),
+                          SlideSizedBox(
+                            height: 65.0,
+                            child: SlideVerticalDivider(
+                              thickness: 5.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                        ],
+                      ),
+                    ]),
+                  ],
+                ),
+                SlideSizedBox(width: 50.0),
+                Column(
+                  children: <Widget>[
+                    SlideSizedBox(height: 60.0),
+                    Row(
+                      children: <Widget>[
+                        PWithQueue(children: <Widget>[
+                          G(id: 2, backgroundColor: Colors.lightGreen),
+                          SlideSizedBox(height: 5.0),
+                          G(id: 3, backgroundColor: Colors.pink[300]),
+                        ]),
+                        SlideSizedBox(width: 40.0),
+                        PWithQueue(children: <Widget>[]),
+                        SlideSizedBox(width: 40.0),
+                        PWithQueue(children: <Widget>[]),
+                        SlideSizedBox(width: 40.0),
+                        PWithQueue(children: <Widget>[]),
+                      ],
+                    ),
+                    Spacer(),
+                    GlobalRunQueue(
+                      center: true,
+                      children: <Widget>[],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide147 extends StatelessWidget {
+  Slide147({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Blocking System Calls',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 2, backgroundColor: Colors.lightGreen),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 4, g0: true),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide148 extends StatelessWidget {
+  Slide148({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Execute Next Goroutine',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 2, backgroundColor: Colors.lightGreen),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 4, g0: true),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide149 extends StatelessWidget {
+  Slide149({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Execute Next Goroutine',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide150 extends StatelessWidget {
+  Slide150({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Create More Goroutines',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide151 extends StatelessWidget {
+  Slide151({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Create More Goroutines',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 4, backgroundColor: Colors.purple),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide152 extends StatelessWidget {
+  Slide152({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Create More Goroutines',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 4, backgroundColor: Colors.purple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 5, backgroundColor: Colors.deepPurple),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide153 extends StatelessWidget {
+  Slide153({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Create More Goroutines',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 4, backgroundColor: Colors.purple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 5, backgroundColor: Colors.deepPurple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 6, backgroundColor: Colors.blueGrey),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide154 extends StatelessWidget {
+  Slide154({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Local Run Queue Overflows',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 3, backgroundColor: Colors.pink[300]),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 4, backgroundColor: Colors.purple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 5, backgroundColor: Colors.deepPurple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 6, backgroundColor: Colors.blueGrey),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          center: true,
+                          children: <Widget>[],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Slide155 extends StatelessWidget {
+  Slide155({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final headline =
+        Theme.of(context).textTheme.headline5.copyWith(color: Colors.white);
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Column(
+        children: <Widget>[
+          SlideTextBox(
+            mainAxisAlignment: MainAxisAlignment.center,
+            height: 150.0,
+            children: <Widget>[
+              SlideText(
+                'Local Run Queue Overflows',
+                textAlign: TextAlign.center,
+                style: headline,
+              ),
+            ],
+          ),
+          Stack(
+            children: <Widget>[
+              SlideSizedBox(
+                height: 480.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        MachineParkingLot(children: <Widget>[]),
+                        PandingGoroutines(children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              M(id: 0),
+                              SlideSizedBox(
+                                height: 65.0,
+                                child: SlideVerticalDivider(
+                                  thickness: 5.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              G(id: 1, backgroundColor: Colors.lightBlue[200]),
+                            ],
+                          ),
+                        ]),
+                      ],
+                    ),
+                    SlideSizedBox(width: 50.0),
+                    Column(
+                      children: <Widget>[
+                        SlideSizedBox(height: 60.0),
+                        Row(
+                          children: <Widget>[
+                            PWithQueue(children: <Widget>[
+                              G(id: 5, backgroundColor: Colors.deepPurple),
+                              SlideSizedBox(height: 5.0),
+                              G(id: 6, backgroundColor: Colors.blueGrey),
+                            ]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                            SlideSizedBox(width: 40.0),
+                            PWithQueue(children: <Widget>[]),
+                          ],
+                        ),
+                        Spacer(),
+                        GlobalRunQueue(
+                          children: <Widget>[
+                            G(id: 4, backgroundColor: Colors.purple),
+                            SlideSizedBox(width: 5.0),
+                            G(id: 7, backgroundColor: Colors.brown),
+                            SlideSizedBox(width: 5.0),
+                            G(id: 3, backgroundColor: Colors.pink[300]),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SlidePositioned(
+                top: -10.0,
+                left: 380.0,
+                child: Column(
+                  children: <Widget>[
+                    M(id: 1),
+                    SlideSizedBox(height: 65.0),
+                    G(id: 2, backgroundColor: Colors.lightGreen),
+                  ],
+                ),
+              )
+            ],
+            overflow: Overflow.visible,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class MachineParkingLot extends StatelessWidget {
   final List<Widget> children;
 
@@ -580,7 +1743,7 @@ class MachineParkingLot extends StatelessWidget {
       MediaQuery.of(context).size.height,
     );
     return SlideContainer(
-      height: 275.0,
+      height: 255.0,
       width: 200.0,
       decoration: BoxDecoration(
         border: Border.all(
@@ -615,7 +1778,7 @@ class PandingGoroutines extends StatelessWidget {
       MediaQuery.of(context).size.height,
     );
     return SlideContainer(
-      height: 200.0,
+      height: 220.0,
       width: 200.0,
       decoration: BoxDecoration(
         border: Border.all(

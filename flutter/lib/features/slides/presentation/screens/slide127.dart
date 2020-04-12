@@ -1059,11 +1059,11 @@ class Slide135 extends StatelessWidget {
     int mID = 0;
     int pID = 0;
     final textStyle = Theme.of(context).textTheme.headline6;
-    return Stack(
-      children: <Widget>[
-        Slide(
-          backgroundColor: Colors.black,
-          child: Column(
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Stack(
+        children: <Widget>[
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Column(
@@ -1113,13 +1113,13 @@ class Slide135 extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        SlidePositioned(
-          top: 268.0,
-          left: 750.0,
-          child: SlideText('Processors', style: textStyle),
-        ),
-      ],
+          SlidePositioned(
+            top: 267.0,
+            left: 750.0,
+            child: SlideText('Processors', style: textStyle),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -1133,11 +1133,11 @@ class Slide136 extends StatelessWidget {
     int mID = 0;
     int pID = 0;
     final textStyle = Theme.of(context).textTheme.headline6;
-    return Stack(
-      children: <Widget>[
-        Slide(
-          backgroundColor: Colors.black,
-          child: Row(
+    return Slide(
+      backgroundColor: Colors.black,
+      child: Stack(
+        children: <Widget>[
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Column(
@@ -1193,23 +1193,23 @@ class Slide136 extends StatelessWidget {
               SlideSizedBox(width: 250.0),
             ],
           ),
-        ),
-        SlidePositioned(
-          top: 105.0,
-          left: 750.0,
-          child: SlideText('Machines', style: textStyle),
-        ),
-        SlidePositioned(
-          top: 268.0,
-          left: 750.0,
-          child: SlideText('Processors', style: textStyle),
-        ),
-        SlidePositioned(
-          top: 483.0,
-          left: 750.0,
-          child: SlideText('Goroutines', style: textStyle),
-        ),
-      ],
+          SlidePositioned(
+            top: 105.0,
+            left: 750.0,
+            child: SlideText('Machines', style: textStyle),
+          ),
+          SlidePositioned(
+            top: 267.0,
+            left: 750.0,
+            child: SlideText('Processors', style: textStyle),
+          ),
+          SlidePositioned(
+            top: 483.0,
+            left: 750.0,
+            child: SlideText('Goroutines', style: textStyle),
+          ),
+        ],
+      ),
     );
   }
 }
