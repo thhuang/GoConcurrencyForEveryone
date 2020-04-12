@@ -18,7 +18,7 @@ class Slide077 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CoffeeCup(),
-              SlideSizedBox(width: 200.0),
+              SlideSizedBox(width: 280.0),
               CoffeeCupEmpty(),
             ],
           ),
