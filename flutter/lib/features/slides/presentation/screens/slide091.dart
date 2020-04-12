@@ -122,7 +122,7 @@ class Slide094 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -157,7 +157,7 @@ class Slide095 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -205,7 +205,7 @@ class Slide096 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -304,7 +304,7 @@ class Slide097 extends StatelessWidget {
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
     return Slide(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

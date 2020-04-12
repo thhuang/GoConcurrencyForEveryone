@@ -54,11 +54,15 @@ class P extends StatelessWidget {
 class M extends StatelessWidget {
   final int id;
   final bool disableText;
+  final Color textColor;
+  final bool m0;
 
   const M({
     Key key,
     this.id,
     this.disableText = false,
+    this.m0 = false,
+    this.textColor = Colors.white,
   }) : super(key: key);
 
   @override
@@ -88,7 +92,8 @@ class M extends StatelessWidget {
                     (boxSize - borderWidth * 2 * pow(3, 0.5)) * scaleFactor,
                     (boxSize - borderWidth * 2 * pow(3, 0.5)) * scaleFactor,
                   ),
-                  painter: BlackTrianglePainter(),
+                  painter:
+                      m0 ? OrangeTrianglePainter() : BlackTrianglePainter(),
                 ),
               ),
               SlidePositioned(
@@ -96,7 +101,7 @@ class M extends StatelessWidget {
                 top: boxSize * 0.4,
                 child: SlideText(
                   disableText ? '' : 'M',
-                  style: textStyle,
+                  style: textStyle.copyWith(color: textColor),
                 ),
               ),
             ],
@@ -128,7 +133,7 @@ class M extends StatelessWidget {
                   top: boxSize * 0.4,
                   child: SlideText(
                     disableText ? '' : 'M',
-                    style: textStyle,
+                    style: textStyle.copyWith(color: textColor),
                   ),
                 ),
               ],
@@ -142,14 +147,19 @@ class G extends StatelessWidget {
   final Color backgroundColor;
   final Color borderColor;
   final bool disableText;
+  final Color textColor;
+  final bool g0;
 
   const G({
     Key key,
     this.id,
-    this.backgroundColor = Colors.black,
+    backgroundColor = Colors.black,
     this.borderColor = Colors.blue,
     this.disableText = false,
-  }) : super(key: key);
+    this.g0 = false,
+    this.textColor = Colors.white,
+  })  : backgroundColor = g0 ? Colors.blue : backgroundColor,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
