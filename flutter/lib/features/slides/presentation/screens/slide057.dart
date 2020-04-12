@@ -278,7 +278,7 @@ class _Slide068State extends State<Slide068>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
   var displacement = 0.0;
-  final duration = Duration(milliseconds: 300);
+  final duration = Duration(milliseconds: 200);
 
   void initState() {
     super.initState();

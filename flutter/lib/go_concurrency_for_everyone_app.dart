@@ -32,6 +32,7 @@ import 'features/slides/presentation/screens/slide113.dart';
 import 'features/slides/presentation/screens/slide114.dart';
 import 'features/slides/presentation/screens/slide127.dart';
 import 'features/slides/presentation/screens/slide137.dart';
+import 'features/slides/presentation/screens/slide187.dart';
 import 'features/slides/presentation/screens/slide_cradits.dart';
 import 'features/slides/presentation/screens/to_be_continued.dart';
 
@@ -193,6 +194,38 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide153(),
     Slide154(),
     Slide155(),
+    Slide156(),
+    Slide157(),
+    Slide158(),
+    Slide159(),
+    Slide160(),
+    Slide161(),
+    Slide162(),
+    Slide163(),
+    Slide164(),
+    Slide165(),
+    Slide166(),
+    Slide167(),
+    Slide168(),
+    Slide169(),
+    Slide170(),
+    Slide171(),
+    Slide172(),
+    Slide173(),
+    Slide174(),
+    Slide175(),
+    Slide176(),
+    Slide177(),
+    Slide178(),
+    Slide179(),
+    Slide180(),
+    Slide181(),
+    Slide182(),
+    Slide183(),
+    Slide184(),
+    Slide185(),
+    Slide186(),
+    Slide187(),
     ToBeContinued(),
     SlideCradits(),
   ];
@@ -204,13 +237,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
       create: (_) => SlidesChangeNotifier(
         slides: slides,
         // TODO: set to [0] after the slides are finished
-        initialSlideIndex: 155,
+        initialSlideIndex: 0,
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: Slide155(),
+          home: Slide000(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(
