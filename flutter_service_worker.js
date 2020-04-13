@@ -2,13 +2,13 @@
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "19e88c547e71c6b9418dc13f0df8bc9b",
-"main.dart.js": "56a2f51988da4a353de0aed95a9ab939",
+"main.dart.js": "820d695b5435a63db105fa4461bf43bb",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "66c0bf774703137dbd2bee80981dc610",
 "assets/LICENSE": "98a35a8e225fce19a4cb84d91cdf6564",
-"assets/AssetManifest.json": "10f03b3ba3b2c39a5e606d1660c0bb0e",
+"assets/AssetManifest.json": "aef299470b83dc1a4510abf377da4234",
 "assets/FontManifest.json": "f0d9a75b92f8ad3b2ef8f1fcdaf79833",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/assets/images/png/check.png": "de3c60325f95002148c5b52b6c128146",
