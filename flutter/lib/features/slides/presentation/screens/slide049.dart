@@ -69,34 +69,13 @@ class Slide049 extends StatelessWidget {
                       style: headline2.copyWith(height: 1.2),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SlideTextHero(
-                        tag: 'Sharing',
-                        child: SlideText(
-                          'Sharing',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                      SlideTextHero(
-                        tag: ' vs ',
-                        child: SlideText(
-                          ' vs ',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                      SlideTextHero(
-                        tag: 'Passing',
-                        child: SlideText(
-                          'Passing',
-                          textAlign: TextAlign.center,
-                          style: headline2.copyWith(height: 1.2),
-                        ),
-                      ),
-                    ],
+                  SlideTextHero(
+                    tag: 'Sharing vs Passing',
+                    child: SlideText(
+                      'Sharing vs Passing',
+                      textAlign: TextAlign.center,
+                      style: headline2.copyWith(height: 1.2),
+                    ),
                   ),
                 ],
               ),
