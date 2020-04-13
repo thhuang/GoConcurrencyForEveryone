@@ -14,7 +14,7 @@ class SlidesChangeNotifier with ChangeNotifier {
         _cacheSlideIndex = initialSlideIndex ?? 0;
 
   void nextSlide(Function() callback) {
-    if (_slideIndex < _slides.length - 1) {
+    if (_slideIndex < endSlideIndex) {
       _cacheSlideIndex = _slideIndex++;
       notifyListeners();
       callback();
@@ -22,29 +22,54 @@ class SlidesChangeNotifier with ChangeNotifier {
   }
 
   void previousSlide(Function() callback) {
-    if (_slideIndex > 0) {
+    if (_slideIndex > firstSlideIndex) {
       _cacheSlideIndex = _slideIndex--;
       notifyListeners();
       callback();
     }
   }
 
-  void toSlide(int slideIndex) {
+  void toSlide(int slideIndex, Function() callback) {
+    if (slideIndex > endSlideIndex) {
+      if (_slideIndex == endSlideIndex) {
+        return;
+      } else {
+        slideIndex = endSlideIndex;
+      }
+    }
+
+    if (slideIndex < firstSlideIndex) {
+      if (_slideIndex == firstSlideIndex) {
+        return;
+      } else {
+        slideIndex = firstSlideIndex;
+      }
+    }
+
     _cacheSlideIndex = _slideIndex;
     _slideIndex = slideIndex;
     notifyListeners();
+    callback();
   }
 
-  void toFirstSlide() {
+  void toFirstSlide(Function() callback) {
+    if (_slideIndex == firstSlideIndex) {
+      return;
+    }
     _cacheSlideIndex = _slideIndex;
-    _slideIndex = 0;
+    _slideIndex = firstSlideIndex;
     notifyListeners();
+    callback();
   }
 
-  void toEndSlide() {
+  void toEndSlide(Function() callback) {
+    if (_slideIndex == endSlideIndex) {
+      return;
+    }
     _cacheSlideIndex = _slideIndex;
-    _slideIndex = _slides.length - 1;
+    _slideIndex = endSlideIndex;
     notifyListeners();
+    callback();
   }
 
   int get currentSlideIndex {
@@ -61,5 +86,13 @@ class SlidesChangeNotifier with ChangeNotifier {
 
   Widget get lastSlide {
     return _slides[_cacheSlideIndex];
+  }
+
+  int get firstSlideIndex {
+    return 0;
+  }
+
+  int get endSlideIndex {
+    return _slides.length - 1;
   }
 }

@@ -77,36 +77,54 @@ class _SlideState extends State<Slide> {
             autofocus: true,
             onKey: (FocusNode node, RawKeyEvent event) {
               if (event.runtimeType == RawKeyUpEvent) {
+                final customNavigation = () {
+                  Navigator.pushReplacement(
+                    context,
+                    AnimatedRoute.build(
+                      type: widget.animatedRouteType,
+                      currentPage: slide.lastSlide,
+                      nextPage: slide.currentSlide,
+                    ),
+                  );
+                };
+
+                final fadeNavigation = () {
+                  Navigator.pushReplacement(
+                    context,
+                    AnimatedRoute.build(
+                      // Use fade animation for returning to previous slide
+                      type: AnimatedRouteType.fade,
+                      currentPage: slide.lastSlide,
+                      nextPage: slide.currentSlide,
+                    ),
+                  );
+                };
+
                 final isRight =
                     event.logicalKey == LogicalKeyboardKey.arrowRight;
                 final isLeft = event.logicalKey == LogicalKeyboardKey.arrowLeft;
                 final isUp = event.logicalKey == LogicalKeyboardKey.arrowUp;
                 final isDown = event.logicalKey == LogicalKeyboardKey.arrowDown;
+                final isKeyS = event.logicalKey == LogicalKeyboardKey.keyS;
+                final isKeyE = event.logicalKey == LogicalKeyboardKey.keyE;
+                final isKeyU = event.logicalKey == LogicalKeyboardKey.keyU;
+                final isKeyD = event.logicalKey == LogicalKeyboardKey.keyD;
+
                 if (isRight || isDown) {
-                  slide.nextSlide(
-                    () => Navigator.pushReplacement(
-                      context,
-                      AnimatedRoute.build(
-                        type: widget.animatedRouteType,
-                        currentPage: slide.lastSlide,
-                        nextPage: slide.currentSlide,
-                      ),
-                    ),
-                  );
+                  slide.nextSlide(customNavigation);
                 } else if (isLeft || isUp) {
-                  slide.previousSlide(
-                    () => Navigator.pushReplacement(
-                      context,
-                      AnimatedRoute.build(
-                        // Use fade animation for returning to previous slide
-                        type: AnimatedRouteType.fade,
-                        currentPage: slide.lastSlide,
-                        nextPage: slide.currentSlide,
-                      ),
-                    ),
-                  );
+                  slide.previousSlide(fadeNavigation);
+                } else if (isKeyS) {
+                  slide.toFirstSlide(fadeNavigation);
+                } else if (isKeyE) {
+                  slide.toEndSlide(fadeNavigation);
+                } else if (isKeyD) {
+                  slide.toSlide(slide.currentSlideIndex + 10, fadeNavigation);
+                } else if (isKeyU) {
+                  slide.toSlide(slide.currentSlideIndex - 10, fadeNavigation);
                 }
               }
+
               return false;
             },
             child: Center(
