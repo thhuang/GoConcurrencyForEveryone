@@ -1,0 +1,19 @@
+* [[https://thhuang.github.io/GoConcurrencyForEveryone][GoConcurrencyForEveryone]]
+👆 Introduction of go concurrency for everyone from any background!
+
+** Agenda
+- Concurrency vs Parallelism
+- Concurrency Models: Sharing vs Passing
+- Channel Primitive & Goroutine
+- Goroutine Scheduler
+[[./misc/agenda.png]]
+
+** Slides Navigation
+|                   | Keyboard  | Mobile      |
+|-------------------+-----------+-------------|
+| Next Page         | =→= / =↓= | swipe left  |
+| Previous Page     | =←= / =↑= | swipe right |
+| Fast Forward      | =D=       |             |
+| Fast Rewind       | =U=       |             |
+| To The First Page | =S=       |             |
+| To The Last Page  | =E=       |             |
