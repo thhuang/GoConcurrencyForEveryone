@@ -2,13 +2,13 @@
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "19e88c547e71c6b9418dc13f0df8bc9b",
-"main.dart.js": "820d695b5435a63db105fa4461bf43bb",
+"main.dart.js": "af861a121d2ca7ee2f7be9f95f99f2b6",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "66c0bf774703137dbd2bee80981dc610",
 "assets/LICENSE": "98a35a8e225fce19a4cb84d91cdf6564",
-"assets/AssetManifest.json": "aef299470b83dc1a4510abf377da4234",
+"assets/AssetManifest.json": "39a8fc4c83bca0992adb14659cc6381d",
 "assets/FontManifest.json": "f0d9a75b92f8ad3b2ef8f1fcdaf79833",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
 "assets/assets/images/png/check.png": "de3c60325f95002148c5b52b6c128146",
@@ -16,6 +16,7 @@ const RESOURCES = {
 "assets/assets/images/png/arrow_right.png": "69c91f5ebf9fe3155af0c0e54d5e730d",
 "assets/assets/images/png/gopher.png": "ee46ddfad564ddca3ef518a29453754c",
 "assets/assets/images/png/toaster.png": "002d4959217545c4e9db07b6a8df385c",
+"assets/assets/images/png/golang_org.png": "26c2ea27ce6bd6123ec458c5cf8f49db",
 "assets/assets/images/png/explode.png": "d95b1aeee760a1ce680405d0ddad3d39",
 "assets/assets/images/png/bread_with_jam.png": "d1ee5cfc6fdf647f3e63ff29908d9e85",
 "assets/assets/images/png/cocoa.png": "b72fec022fb4bb414465eb8d25913ff9",
