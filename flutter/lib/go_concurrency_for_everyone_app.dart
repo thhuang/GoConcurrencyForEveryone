@@ -33,7 +33,7 @@ import 'features/slides/presentation/screens/slide114.dart';
 import 'features/slides/presentation/screens/slide127.dart';
 import 'features/slides/presentation/screens/slide137.dart';
 import 'features/slides/presentation/screens/slide187.dart';
-import 'features/slides/presentation/screens/slide_cradits.dart';
+import 'features/slides/presentation/screens/slide_cradits_and_references.dart';
 import 'features/slides/presentation/screens/to_be_continued.dart';
 
 class GoConcurrencyForEveryoneApp extends StatelessWidget {
@@ -227,7 +227,8 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     Slide186(),
     Slide187(),
     ToBeContinued(),
-    SlideCradits(),
+    SlideCraditsAndReferences(),
+    Slide187(),
   ];
 
   @override
@@ -236,7 +237,6 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        // TODO: set to [0] after the slides are finished
         initialSlideIndex: 0,
       ),
       child: Consumer<SlidesChangeNotifier>(
