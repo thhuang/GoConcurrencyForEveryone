@@ -232,7 +232,7 @@ class Slide102 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -291,7 +291,7 @@ class Slide103 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -357,7 +357,7 @@ class Slide104 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -423,7 +423,7 @@ class Slide105 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -489,7 +489,7 @@ class Slide106 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -555,7 +555,7 @@ class Slide107 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -622,7 +622,7 @@ class Slide108 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -689,7 +689,7 @@ class Slide109 extends StatelessWidget {
           SlideSizedBox(height: 20.0),
           SlideTextBox(
             height: 350.0,
-            width: 980.0,
+            width: 1000.0,
             borderWidth: 2.0,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[

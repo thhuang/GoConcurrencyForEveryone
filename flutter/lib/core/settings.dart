@@ -2,6 +2,7 @@ const DEFAULT_MAX_PROCESSOR_COUNT = 4;
 const SLIDE_WIDTH_HEIGHT_RATIO = 16.0 / 9.0;
 
 // images
+const FLUTTER = 'assets/images/png/flutter.png';
 const GOLANG_ORG = 'assets/images/png/golang_org.png';
 const GOPHER = 'assets/images/png/gopher.png';
 const BREAD_WITH_JAM = 'assets/images/png/bread_with_jam.png';
