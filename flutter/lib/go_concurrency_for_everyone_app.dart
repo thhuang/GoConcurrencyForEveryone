@@ -235,13 +235,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 188,
+        initialSlideIndex: 0,
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: SlideCraditsAndReferences(),
+          home: Slide000(),
           theme: theme.copyWith(
             textTheme: TextTheme(
               headline1: TextStyle(

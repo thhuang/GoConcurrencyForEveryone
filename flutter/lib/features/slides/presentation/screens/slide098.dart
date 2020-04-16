@@ -239,7 +239,7 @@ class Slide102 extends StatelessWidget {
               SlideTextHero(
                 tag: "1",
                 child: SlideText(
-                  'No system calls needed',
+                  'Auto scheduled with no system calls needed',
                   style: textStyle,
                 ),
               ),
@@ -247,7 +247,7 @@ class Slide102 extends StatelessWidget {
               SlideTextHero(
                 tag: "3",
                 child: SlideText(
-                  'Lightweight',
+                  'Lightweight & dynamic',
                   style: textStyle,
                 ),
               ),
@@ -298,7 +298,7 @@ class Slide103 extends StatelessWidget {
               SlideTextHero(
                 tag: "1",
                 child: SlideText(
-                  'No system calls needed',
+                  'Auto scheduled with no system calls needed',
                   style: textStyle,
                 ),
               ),
@@ -310,7 +310,7 @@ class Slide103 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "3",
                   child: SlideText(
-                    'Lightweight',
+                    'Lightweight & dynamic',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -364,7 +364,7 @@ class Slide104 extends StatelessWidget {
               SlideTextHero(
                 tag: "1",
                 child: SlideText(
-                  'No system calls needed',
+                  'Auto scheduled with no system calls needed',
                   style: textStyle,
                 ),
               ),
@@ -376,7 +376,7 @@ class Slide104 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "3",
                   child: SlideText(
-                    'Lightweight',
+                    'Lightweight & dynamic',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -431,7 +431,7 @@ class Slide105 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "1",
                   child: SlideText(
-                    'No system calls needed',
+                    'Auto scheduled with no system calls needed',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -440,7 +440,7 @@ class Slide105 extends StatelessWidget {
               SlideTextHero(
                 tag: "3",
                 child: SlideText(
-                  'Lightweight',
+                  'Lightweight & dynamic',
                   style: textStyle,
                 ),
               ),
@@ -497,7 +497,7 @@ class Slide106 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "1",
                   child: SlideText(
-                    'No system calls needed',
+                    'Auto scheduled with no system calls needed',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -506,7 +506,7 @@ class Slide106 extends StatelessWidget {
               SlideTextHero(
                 tag: "3",
                 child: SlideText(
-                  'Lightweight',
+                  'Lightweight & dynamic',
                   style: textStyle,
                 ),
               ),
@@ -563,7 +563,7 @@ class Slide107 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "1",
                   child: SlideText(
-                    'No system calls needed',
+                    'Auto scheduled with no system calls needed',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -573,7 +573,7 @@ class Slide107 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "3",
                   child: SlideText(
-                    'Lightweight',
+                    'Lightweight & dynamic',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -630,7 +630,7 @@ class Slide108 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "1",
                   child: SlideText(
-                    'No system calls needed',
+                    'Auto scheduled with no system calls needed',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -640,7 +640,7 @@ class Slide108 extends StatelessWidget {
                 child: SlideTextHero(
                   tag: "3",
                   child: SlideText(
-                    'Lightweight',
+                    'Lightweight & dynamic',
                     style: textStyle.copyWith(color: Colors.white24),
                   ),
                 ),
@@ -696,7 +696,7 @@ class Slide109 extends StatelessWidget {
               SlideTextHero(
                 tag: "1",
                 child: SlideText(
-                  'No system calls needed',
+                  'Auto scheduled with no system calls needed',
                   style: textStyle,
                 ),
               ),
@@ -704,7 +704,7 @@ class Slide109 extends StatelessWidget {
               SlideTextHero(
                 tag: "3",
                 child: SlideText(
-                  'Lightweight',
+                  'Lightweight & dynamic',
                   style: textStyle,
                 ),
               ),
