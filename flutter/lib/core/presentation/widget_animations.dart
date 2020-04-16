@@ -20,25 +20,31 @@ class Rotator extends StatefulWidget {
 }
 
 class _RotatorState extends State<Rotator> with SingleTickerProviderStateMixin {
-  AnimationController animationController;
+  AnimationController _animation;
 
   @override
   void initState() {
     super.initState();
-    animationController = AnimationController(
+    _animation = AnimationController(
       vsync: this,
       duration: Duration(seconds: widget.seconds),
     )..repeat();
   }
 
   @override
+  void dispose() {
+    _animation.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: animationController,
+      animation: _animation,
       child: widget.child,
       builder: (BuildContext context, Widget _widget) {
         return Transform.rotate(
-          angle: animationController.value * 2 * pi,
+          angle: _animation.value * 2 * pi,
           child: _widget,
         );
       },
