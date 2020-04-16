@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
+import '../../../../core/settings.dart';
 import '../widgets/agenda.dart';
 
 class Slide049 extends StatelessWidget {
@@ -11,98 +12,103 @@ class Slide049 extends StatelessWidget {
     final headline2 = Theme.of(context).textTheme.headline2;
     return Slide(
       backgroundColor: Colors.black,
-      child: Column(
+      child: Stack(
         children: <Widget>[
-          SlideSizedBox(
-            height: 30.0,
-          ),
-          SlideTextHero(
-            tag: 'Go Concurrency for Everyone',
-            child: SlideText(
-              'Go Concurrency for Everyone',
-              textAlign: TextAlign.center,
-              style: headline2.copyWith(fontSize: 65.0),
-            ),
-          ),
-          SlideSizedBox(height: 30.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          ...zeroWidthImages,
+          Column(
             children: <Widget>[
-              AgendaBox(
-                borderColor: Colors.green,
+              SlideSizedBox(
+                height: 30.0,
+              ),
+              SlideTextHero(
+                tag: 'Go Concurrency for Everyone',
+                child: SlideText(
+                  'Go Concurrency for Everyone',
+                  textAlign: TextAlign.center,
+                  style: headline2.copyWith(fontSize: 65.0),
+                ),
+              ),
+              SlideSizedBox(height: 30.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SlideTextHero(
-                    tag: 'Concurrency',
-                    child: SlideText(
-                      'Concurrency',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
+                  AgendaBox(
+                    borderColor: Colors.green,
+                    children: <Widget>[
+                      SlideTextHero(
+                        tag: 'Concurrency',
+                        child: SlideText(
+                          'Concurrency',
+                          textAlign: TextAlign.center,
+                          style: headline2.copyWith(height: 1.2),
+                        ),
+                      ),
+                      SlideTextHero(
+                        tag: 'vs',
+                        child: SlideText(
+                          'vs',
+                          textAlign: TextAlign.center,
+                          style: headline2.copyWith(height: 1.2),
+                        ),
+                      ),
+                      SlideTextHero(
+                        tag: 'Parallelism',
+                        child: SlideText(
+                          'Parallelism',
+                          textAlign: TextAlign.center,
+                          style: headline2.copyWith(height: 1.2),
+                        ),
+                      ),
+                    ],
                   ),
-                  SlideTextHero(
-                    tag: 'vs',
-                    child: SlideText(
-                      'vs',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
-                  ),
-                  SlideTextHero(
-                    tag: 'Parallelism',
-                    child: SlideText(
-                      'Parallelism',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
+                  SlideSizedBox(width: 30.0),
+                  AgendaBox(
+                    borderColor: Colors.red,
+                    children: <Widget>[
+                      SlideTextHero(
+                        tag: 'Concurrency Models:',
+                        child: SlideText(
+                          'Concurrency Models:',
+                          textAlign: TextAlign.center,
+                          style: headline2.copyWith(height: 1.2),
+                        ),
+                      ),
+                      SlideTextHero(
+                        tag: 'Sharing vs Passing',
+                        child: SlideText(
+                          'Sharing vs Passing',
+                          textAlign: TextAlign.center,
+                          style: headline2.copyWith(height: 1.2),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              SlideSizedBox(width: 30.0),
-              AgendaBox(
-                borderColor: Colors.red,
+              SlideSizedBox(height: 30.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SlideTextHero(
-                    tag: 'Concurrency Models:',
-                    child: SlideText(
-                      'Concurrency Models:',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
+                  AgendaBox(
+                    borderColor: Colors.yellow,
+                    children: <Widget>[
+                      SlideText(
+                        'Channel Primitive\n&\nGoroutine',
+                        textAlign: TextAlign.center,
+                        style: headline2.copyWith(height: 1.2),
+                      ),
+                    ],
                   ),
-                  SlideTextHero(
-                    tag: 'Sharing vs Passing',
-                    child: SlideText(
-                      'Sharing vs Passing',
-                      textAlign: TextAlign.center,
-                      style: headline2.copyWith(height: 1.2),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          SlideSizedBox(height: 30.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              AgendaBox(
-                borderColor: Colors.yellow,
-                children: <Widget>[
-                  SlideText(
-                    'Channel Primitive\n&\nGoroutine',
-                    textAlign: TextAlign.center,
-                    style: headline2.copyWith(height: 1.2),
-                  ),
-                ],
-              ),
-              SlideSizedBox(width: 30.0),
-              AgendaBox(
-                borderColor: Colors.blue,
-                children: <Widget>[
-                  SlideText(
-                    'Goroutine Scheduler',
-                    textAlign: TextAlign.center,
-                    style: headline2,
+                  SlideSizedBox(width: 30.0),
+                  AgendaBox(
+                    borderColor: Colors.blue,
+                    children: <Widget>[
+                      SlideText(
+                        'Goroutine Scheduler',
+                        textAlign: TextAlign.center,
+                        style: headline2,
+                      ),
+                    ],
                   ),
                 ],
               ),
