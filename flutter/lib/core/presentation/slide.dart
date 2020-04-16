@@ -46,7 +46,6 @@ class _SlideState extends State<Slide> {
       body: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => GestureDetector(
           onPanUpdate: (detail) {
-            print(detail.delta.dx);
             if (detail.delta.dx < -5.0) {
               slide.nextSlide(
                 () => Navigator.pushReplacement(
@@ -129,10 +128,11 @@ class _SlideState extends State<Slide> {
             },
             child: Center(
               child: Container(
-                  height: height,
-                  width: width,
-                  child: widget.child,
-                  color: widget.backgroundColor),
+                height: height,
+                width: width,
+                child: widget.child,
+                color: widget.backgroundColor,
+              ),
             ),
           ),
         ),

@@ -1,8 +1,9 @@
-import 'package:GCFE/core/presentation/scale_factors.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/presentation/scale_factors.dart';
 import '../../../../core/presentation/slide.dart';
+import '../../../../core/settings.dart';
 
 class Slide000 extends StatelessWidget {
   Slide000({Key key}) : super(key: key);
@@ -15,26 +16,31 @@ class Slide000 extends StatelessWidget {
     );
     return Slide(
       backgroundColor: Colors.black,
-      child: Center(
-        child: SlideSizedBox(
-          width: 900.0,
-          height: 320.0,
-          child: TypewriterAnimatedTextKit(
-            text: [
-              "Concurrency is a pattern!",
-              "Concurrency is a design!!",
-              "Concurrency is a lifestyle!!!",
-            ],
-            textStyle: Theme.of(context).textTheme.headline1.copyWith(
-                  fontFamily: 'UnifrakturMaguntia',
-                  fontSize: 140.0 * scaleFactor,
-                ),
-            textAlign: TextAlign.start,
-            alignment: AlignmentDirectional.center,
-            speed: Duration(milliseconds: 200),
-            totalRepeatCount: 1000,
+      child: Stack(
+        children: <Widget>[
+          ...zeroWidthImages,
+          Center(
+            child: SlideSizedBox(
+              width: 900.0,
+              height: 320.0,
+              child: TypewriterAnimatedTextKit(
+                text: [
+                  "Concurrency is a pattern!",
+                  "Concurrency is a design!!",
+                  "Concurrency is a lifestyle!!!",
+                ],
+                textStyle: Theme.of(context).textTheme.headline1.copyWith(
+                      fontFamily: 'UnifrakturMaguntia',
+                      fontSize: 140.0 * scaleFactor,
+                    ),
+                textAlign: TextAlign.start,
+                alignment: AlignmentDirectional.center,
+                speed: Duration(milliseconds: 200),
+                totalRepeatCount: 1000,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

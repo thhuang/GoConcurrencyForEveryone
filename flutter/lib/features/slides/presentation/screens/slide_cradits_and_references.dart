@@ -1,7 +1,7 @@
-import 'package:GCFE/core/settings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
+import '../../../../core/settings.dart';
 
 class SlideCraditsAndReferences extends StatelessWidget {
   SlideCraditsAndReferences({Key key}) : super(key: key);

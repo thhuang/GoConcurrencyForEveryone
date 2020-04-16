@@ -1,4 +1,3 @@
-import 'package:GCFE/core/presentation/widget_animations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/presentation/slide.dart';
