@@ -1,4 +1,4 @@
-* [[https://thhuang.github.io/GoConcurrencyForEveryone][GoConcurrencyForEveryone]]
+* [[https://thhuang.github.io/GoConcurrencyForEveryone][Go Concurrency for Everyone]]
 👆 Introduction of go concurrency for everyone from any background!
 
 ** Agenda
