@@ -29,13 +29,6 @@ class Slide001 extends StatelessWidget {
               child: SlideText('TH Huang', style: textStyle),
             ),
           ),
-          SlideSizedBox(height: 10.0),
-          SlideSizedBox(
-            width: 150.0,
-            child: FittedBox(
-              child: SlideText('April 17th, 2020', style: textStyle),
-            ),
-          ),
         ],
       ),
     );

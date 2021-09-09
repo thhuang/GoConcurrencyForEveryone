@@ -214,8 +214,7 @@ class Slide102 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -273,8 +272,7 @@ class Slide103 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -303,7 +301,7 @@ class Slide103 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ in the virtual space of go runtime',
+                '→ in the virtual space of go runtime',
                 style: textStyle.copyWith(color: Colors.black),
               ),
               Center(
@@ -339,8 +337,7 @@ class Slide104 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -369,7 +366,7 @@ class Slide104 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ in the virtual space of go runtime',
+                '→ in the virtual space of go runtime',
                 style: textStyle,
               ),
               Center(
@@ -405,8 +402,7 @@ class Slide105 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -445,7 +441,7 @@ class Slide105 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ resizable, bounded stacks with 2KB initial size',
+                '→ resizable, bounded stacks with 2KB initial size',
                 style: textStyle.copyWith(color: Colors.black),
               ),
               Center(
@@ -471,8 +467,7 @@ class Slide106 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -511,7 +506,7 @@ class Slide106 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ resizable, bounded stacks with 2KB initial size',
+                '→ resizable, bounded stacks with 2KB initial size',
                 style: textStyle,
               ),
               Center(
@@ -537,8 +532,7 @@ class Slide107 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -587,7 +581,7 @@ class Slide107 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ about 3 cheap instructions per function call',
+                '→ about 3 cheap instructions per function call',
                 style: textStyle.copyWith(color: Colors.black),
               ),
             ],
@@ -604,8 +598,7 @@ class Slide108 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -654,7 +647,7 @@ class Slide108 extends StatelessWidget {
                 ),
               ),
               SlideText(
-                '⭢ about 3 cheap instructions per function call',
+                '→ about 3 cheap instructions per function call',
                 style: textStyle,
               ),
             ],
@@ -671,8 +664,7 @@ class Slide109 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(
@@ -730,8 +722,7 @@ class Slide110 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headline1StyleWith = Theme.of(context).textTheme.headline1.copyWith;
-    final textStyle =
-        Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
+    final textStyle = Theme.of(context).textTheme.headline2.copyWith(height: 1.8);
     return Slide(
       backgroundColor: Colors.black,
       child: Column(

@@ -36,9 +36,9 @@ class Slide091 extends StatelessWidget {
             ],
           ),
           SlideText(
-            '\n',
+            '&\nGoroutine',
             textAlign: TextAlign.center,
-            style: headline1StyleWith(fontSize: 100.0, height: 1.5),
+            style: headline1StyleWith(fontSize: 100.0, height: 1.5, color: Colors.transparent),
           ),
         ],
       ),
