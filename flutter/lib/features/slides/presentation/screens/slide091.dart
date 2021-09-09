@@ -230,7 +230,7 @@ class Slide096 extends StatelessWidget {
               ),
             ],
           ),
-          SlideSizedBox(height: 20.0),
+          SlideSizedBox(height: 10.0),
           SlideSizedBox(
             height: 100.0,
             child: SlideText(
