@@ -136,7 +136,7 @@ class Slide094 extends StatelessWidget {
           ),
           SlideSizedBox(height: 10.0),
           SlideSizedBox(
-            height: 280.0,
+            height: 290.0,
             child: SlideText(
               'is a pipeline\nfor sending and receiving\nstructured data\nbetween goroutines',
               textAlign: TextAlign.center,
@@ -184,7 +184,7 @@ class Slide095 extends StatelessWidget {
           ),
           SlideSizedBox(height: 10.0),
           SlideSizedBox(
-            height: 280.0,
+            height: 290.0,
             child: SlideText(
               'is a pipeline\nfor sending and receiving\nstructured data\nbetween goroutines',
               textAlign: TextAlign.center,
@@ -232,7 +232,7 @@ class Slide096 extends StatelessWidget {
           ),
           SlideSizedBox(height: 30.0),
           SlideSizedBox(
-            height: 80.0,
+            height: 100.0,
             child: SlideText(
               'Do not communicate by sharing memory;',
               textAlign: TextAlign.center,

@@ -65,9 +65,9 @@ class Slide099 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SlideText(
-            '\n',
+            'Channel Primitive\n&',
             textAlign: TextAlign.center,
-            style: headline1StyleWith(fontSize: 100.0, height: 1.5),
+            style: headline1StyleWith(fontSize: 100.0, height: 1.5, color: Colors.transparent),
           ),
           SlideTextHero(
             tag: 'Goroutine',
