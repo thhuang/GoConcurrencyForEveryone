@@ -1,3 +1,4 @@
+import 'package:GCFE/features/slides/presentation/screens/slide091.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,13 +13,13 @@ class GoConcurrencyForEveryoneApp extends StatelessWidget {
     return ChangeNotifierProvider<SlidesChangeNotifier>(
       create: (_) => SlidesChangeNotifier(
         slides: slides,
-        initialSlideIndex: 0,
+        initialSlideIndex: 96,
       ),
       child: Consumer<SlidesChangeNotifier>(
         builder: (context, slide, _) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Go Concurrency for Everyone',
-          home: Slide000(),
+          home: Slide096(),
           theme: theme.copyWith(textTheme: mainTextTheme),
         ),
       ),

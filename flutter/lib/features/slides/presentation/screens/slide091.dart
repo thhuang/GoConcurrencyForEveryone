@@ -134,7 +134,7 @@ class Slide094 extends StatelessWidget {
               style: headline1StyleWith(fontSize: 100.0, height: 1.5),
             ),
           ),
-          SlideSizedBox(height: 10.0),
+          SlideSizedBox(height: 5.0),
           SlideSizedBox(
             height: 290.0,
             child: SlideText(
@@ -143,7 +143,7 @@ class Slide094 extends StatelessWidget {
               style: headline1StyleWith(fontSize: 55.0, height: 1.3),
             ),
           ),
-          SlideSizedBox(height: 10.0),
+          SlideSizedBox(height: 5.0),
         ],
       ),
     );
@@ -182,7 +182,7 @@ class Slide095 extends StatelessWidget {
               ),
             ],
           ),
-          SlideSizedBox(height: 10.0),
+          SlideSizedBox(height: 5.0),
           SlideSizedBox(
             height: 290.0,
             child: SlideText(
@@ -191,7 +191,7 @@ class Slide095 extends StatelessWidget {
               style: headline1StyleWith(fontSize: 55.0, height: 1.3),
             ),
           ),
-          SlideSizedBox(height: 10.0),
+          SlideSizedBox(height: 5.0),
         ],
       ),
     );
@@ -230,7 +230,7 @@ class Slide096 extends StatelessWidget {
               ),
             ],
           ),
-          SlideSizedBox(height: 30.0),
+          SlideSizedBox(height: 20.0),
           SlideSizedBox(
             height: 100.0,
             child: SlideText(
