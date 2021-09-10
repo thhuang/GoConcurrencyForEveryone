@@ -41,6 +41,7 @@ const SLIDE_WIDTH_HEIGHT_RATIO = 16.0 / 9.0;
 const FLUTTER = 'assets/images/png/flutter.png';
 const GOLANG_ORG = 'assets/images/png/golang_org.png';
 const GOPHER = 'assets/images/png/gopher.png';
+const GOPHER_BIG = 'assets/images/png/gopher_big.png';
 const BREAD_WITH_JAM = 'assets/images/png/bread_with_jam.png';
 const CHOCOLATE = 'assets/images/png/chocolate.png';
 const COCOA = 'assets/images/png/cocoa.png';
