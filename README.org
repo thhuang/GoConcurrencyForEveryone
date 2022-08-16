@@ -1,5 +1,5 @@
 * [[https://thhuang.github.io/GoConcurrencyForEveryone][Go Concurrency for Everyone]]
-👆 Introduction of go concurrency for everyone from any background!
+👆 This is a presentation that introduces Go concurrency to everyone from any background!
 
 ** Agenda
 - Concurrency vs Parallelism
